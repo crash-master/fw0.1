@@ -1,0 +1,27 @@
+body {
+	background: url("../img/powered-by.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	color: white;
+	font-family: Arial;
+}
+
+div.container {
+	margin-top: 150px;
+}
+
+a {
+	color: white;
+    position: relative;
+    top: 50px;
+}
+
+a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+h2, h4 {
+	margin: 20px 0;
+}

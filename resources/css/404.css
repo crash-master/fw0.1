@@ -1,0 +1,25 @@
+body {
+	background-color: #3572b0;
+	overflow: hidden;
+}
+
+div {
+	color: white;
+	margin: auto;
+	margin-top: 200px;
+}
+
+p:first-of-type {
+	font-size: 100px;
+}
+
+p {
+	margin: 15px 0;
+	font-size: 18px;
+}
+
+a {
+	color: white; 
+	text-decoration: underline;
+	font-size: 16px;
+}

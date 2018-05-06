@@ -4,7 +4,7 @@ class IncludeControll{
     public static $listTheInclude;
 
     public static function scan($path){
-        $dir = scandir($path);
+        $dir = @scandir($path);
         $count = count($dir);
         $files = array();
         for($i=0;$i<$count;$i++){

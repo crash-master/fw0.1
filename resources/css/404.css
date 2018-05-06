@@ -1,25 +1,43 @@
-body {
-	background-color: #3572b0;
-	overflow: hidden;
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Verdana;
 }
 
-div {
-	color: white;
+body{
+	background: #fefefe;
+}
+
+.wrapper{
+	width: 800px;
 	margin: auto;
-	margin-top: 200px;
+	margin-top: 20vh;
+	text-align: center;
 }
 
-p:first-of-type {
-	font-size: 100px;
+.main-text{
+	font-size: 140px;
+	color: #aaa;
 }
 
-p {
-	margin: 15px 0;
-	font-size: 18px;
+.link{
+	font-size: 30px;
+	color: #555;
+	margin: 50px 0;
 }
 
-a {
-	color: white; 
-	text-decoration: underline;
-	font-size: 16px;
+.go-back{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #009688;
+	font-size: 20px;
+	transition-duration: .2s;
+}
+
+.go-back:hover{
+	background-color: #00695C;
 }

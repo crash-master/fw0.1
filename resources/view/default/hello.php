@@ -5,19 +5,19 @@
     <title>Hello :)</title>
     <?= 
         View::css([
-            '*' => ['bootstrap.min.css', 'powered-by.css']
+            '*' => ['hello.css']
         ]); 
     ?>
     
     <?= 
         View::js([
-            '*' => ['jquery-2.2.2.min.js','bootstrap.min.js']
+            '*' => []
         ]); 
     ?>
 </head>
 <body>
-    <div class="container">
-        <h1>Powered by fw4</h1>
+    <div class="wrapper">
+        <h1 class="hello">Hello, I`m FW</h1>
     </div>
 </body>
 </html>

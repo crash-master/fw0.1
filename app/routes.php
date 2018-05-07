@@ -4,12 +4,9 @@
 *   Router::get('route', 'action');
 *   Router::post('field', 'action', 'route'?);
 *   Router::actions(array_actions)
-*   Router::controller(controller_name)
+*   Router::controller(controller_name, [only])
 */
 
 Router::_404('IndexController@_404');
 
-Router::controller('IndexController', [
-    '_404',
-    'poweredBy'
-]);
+Router::get('/', 'IndexController@index');

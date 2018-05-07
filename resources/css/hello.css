@@ -5,6 +5,10 @@
 	font-family: verdana;
 }
 
+body{
+	background: #fefefe;
+}
+
 .wrapper{
 	width: 800px;
 	margin: auto;

@@ -31,3 +31,11 @@
 (Sys) Time of generate page: 0.0090000629425049 AT 2018.05.07 11:20:00
 (SQL query count) 0 AT 2018.05.07 11:20:00
 (PHP ERR) array_keys() expects parameter 1 to be array, null given G:\server\OSPanel\domains\fw01\fw\kernel\maker.php in line 25 AT 2018.05.07 11:20:00
+
+(Sys) Time of generate page: 0.0079998970031738 AT 2018.05.07 11:20:37
+(SQL query count) 0 AT 2018.05.07 11:20:37
+(PHP ERR) Non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.05.07 11:20:37
+
+(Sys) Time of generate page: 0.0079998970031738 AT 2018.05.07 11:20:40
+(SQL query count) 0 AT 2018.05.07 11:20:40
+(PHP ERR) array_keys() expects parameter 1 to be array, null given G:\server\OSPanel\domains\fw01\fw\kernel\maker.php in line 25 AT 2018.05.07 11:20:40

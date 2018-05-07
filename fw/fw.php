@@ -14,11 +14,9 @@ IncludeControll::modules();
 Module::includesAllModules();
 
 DBIO::start();
-Data::init();
 Components::init();
 
-if(Config::get('system -> migration') == "on")
-    IncludeControll::migrationsUp();
+//IncludeControll::migrationsUp();
 
 Router::run(Config::get('system -> showFuncName'));
 

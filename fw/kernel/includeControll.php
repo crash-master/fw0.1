@@ -114,10 +114,11 @@ class IncludeControll{
 
     }
     
-    public static function migrationsUp(){
-        Maker::cleanMigrations();
-        Maker::setAllMigration();
-    }
+    // public static function migrationsUp(){
+    //     // dont used
+    //     Maker::cleanMigrations();
+    //     Maker::setAllMigration();
+    // }
 
     private static function fileList($arr){
         $page = View::getCurrentPage();

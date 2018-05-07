@@ -264,6 +264,8 @@ class DBIO{
     public static function drop($table){
         if(empty($table))
             return false;
+
+        return self::fq("DROP TABLE `{$table}`");
     }
     
     public static function columns($tablename){

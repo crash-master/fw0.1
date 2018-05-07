@@ -119,46 +119,61 @@ class comController{
         return 'FALSE';
 
     }
+
+    public function migrationRefreshAll(){
+       return $this -> migrationUpAll();
+    }
+
+    public function migrationRefresh($name){
+        $res = $this -> migrationDown($name);
+        if($res == 'TRUE'){
+            $res = $this -> migrationUp($name);
+        }
+
+        return $res;
+    }
     
     public function migrationUpAll(){
-        
-        file_put_contents('fw/config/data.json','');
-        
-        if(\Config::get('system -> migration') != 'on'){
+        if(\Config::get('system -> migration') == 'on'){
             if(\Maker::refreshMigration())
                 return 'TRUE';
         }
-        
-        return 'TRUE';
+        \Err::add("Err COM", 'Migrations is off in config');
+        return 'FALSE';
         
     }
     
     public function migrationDownAll(){
+        if(\Config::get('system -> migration') == 'on'){
+            if(\Maker::unsetAllMigration())
+                return 'TRUE';
+        }
 
-        file_put_contents('fw/config/data.json','');
-
-        if(\Maker::unsetAllMigration())
-            return 'TRUE';
-
-        return 'TRUE';
+        \Err::add("Err COM", 'Migrations is off in config');
+        return 'FALSE';
 
     }
     
     public function migrationDown($name){
+
+        if(\Config::get('system -> migration') == 'on'){
         
-        if(!file_exists('app/migrations/'.$name.'Migration.php')){
+            if(!file_exists('app/migrations/'.$name.'Migration.php')){
+                
+                return 'FALSE';
+                
+            }
             
-            return 'FALSE';
-            
+            if(\Maker::unsetMigration([NULL, $name])){
+                
+                return 'TRUE';
+                
+            }
+
         }
-        
-        if(!\Maker::unsetMigration([NULL, $name])){
-            
-            \Err::add('ERR Com',"Migration {$name} was not unset");
-            
-            return 'FALSE';
-            
-        }
+
+        \Err::add("Err COM", 'Migrations is off in config');
+        \Err::add('ERR Com',"Migration {$name} was not unset");
         
         return 'TRUE';
         

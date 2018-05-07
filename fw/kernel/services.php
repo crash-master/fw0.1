@@ -123,7 +123,6 @@ function arrayToArray($arr){
 function dump(){
     Err::log();
     Log::dump();
-    Data::dump();
 
     return true;
 }

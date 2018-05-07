@@ -39,3 +39,88 @@
 (Sys) Time of generate page: 0.0079998970031738 AT 2018.05.07 11:20:40
 (SQL query count) 0 AT 2018.05.07 11:20:40
 (PHP ERR) array_keys() expects parameter 1 to be array, null given G:\server\OSPanel\domains\fw01\fw\kernel\maker.php in line 25 AT 2018.05.07 11:20:40
+
+(Sys) Time of generate page: 0.017000913619995 AT 2018.05.07 16:44:23
+(SQL query count) 0 AT 2018.05.07 16:44:23
+
+(Sys) Time of generate page: 0.013999938964844 AT 2018.05.07 16:44:25
+(SQL query count) 0 AT 2018.05.07 16:44:25
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.07 16:44:30
+(SQL query count) 0 AT 2018.05.07 16:44:30
+
+(CoreTemplate::create()) Template 'app/migrations/TestMigration.php' was generated AT 2018.05.07 16:44:51
+(Sys) Time of generate page: 0.0080001354217529 AT 2018.05.07 16:44:51
+(SQL query count) 0 AT 2018.05.07 16:44:51
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.07 16:45:27
+(SQL query count) 0 AT 2018.05.07 16:45:27
+
+(Maker) Unset migration 'Test' AT 2018.05.07 16:45:41
+(Maker) Set migration 'Test' AT 2018.05.07 16:45:42
+(CoreTemplate::create()) Template 'app/sets/Test.php' was generated AT 2018.05.07 16:45:42
+(CoreTemplate::create()) Template 'app/models/Test.php' was generated AT 2018.05.07 16:45:42
+(Sys) Time of generate page: 0.30001711845398 AT 2018.05.07 16:45:42
+(SQL query count) 1 AT 2018.05.07 16:45:42
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 241 AT 2018.05.07 16:45:42
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.07 16:45:45
+(SQL query count) 0 AT 2018.05.07 16:45:45
+
+(Sys) Time of generate page: 0.015001058578491 AT 2018.05.07 16:46:28
+(SQL query count) 0 AT 2018.05.07 16:46:28
+
+(Maker) Unset migration 'Test' AT 2018.05.07 16:46:36
+(Maker) Set migration 'Test' AT 2018.05.07 16:46:36
+(Sys) Time of generate page: 0.010001182556152 AT 2018.05.07 16:46:36
+(SQL query count) 1 AT 2018.05.07 16:46:36
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 241 AT 2018.05.07 16:46:36
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.07 16:46:37
+(SQL query count) 0 AT 2018.05.07 16:46:37
+
+(Maker) Unset migration 'Test' AT 2018.05.07 16:46:58
+(Sys) Time of generate page: 0.013000965118408 AT 2018.05.07 16:46:58
+(SQL query count) 0 AT 2018.05.07 16:46:58
+
+(Maker) Unset migration 'Test' AT 2018.05.07 17:06:58
+(Sys) Time of generate page: 0.096005916595459 AT 2018.05.07 17:06:58
+(SQL query count) 1 AT 2018.05.07 17:06:58
+
+(Maker) Set migration 'Test' AT 2018.05.07 17:07:17
+(Sys) Time of generate page: 0.14900803565979 AT 2018.05.07 17:07:17
+(SQL query count) 1 AT 2018.05.07 17:07:17
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 241 AT 2018.05.07 17:07:17
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.07 17:10:24
+(SQL query count) 0 AT 2018.05.07 17:10:24
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.07 17:11:12
+(SQL query count) 0 AT 2018.05.07 17:11:12
+
+(Sys) Time of generate page: 0.015001058578491 AT 2018.05.07 17:17:55
+(SQL query count) 0 AT 2018.05.07 17:17:55
+
+(Maker) Unset migration 'Test' AT 2018.05.07 17:18:52
+(Maker) Set migration 'Test' AT 2018.05.07 17:18:52
+(Sys) Time of generate page: 0.2440140247345 AT 2018.05.07 17:18:52
+(SQL query count) 2 AT 2018.05.07 17:18:52
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 241 AT 2018.05.07 17:18:52
+
+(Sys) Time of generate page: 0.015001058578491 AT 2018.05.07 17:19:45
+(SQL query count) 0 AT 2018.05.07 17:19:45
+
+(Maker) Unset migration 'Test' AT 2018.05.07 17:19:47
+(Maker) Set migration 'Test' AT 2018.05.07 17:19:47
+(Sys) Time of generate page: 0.40702295303345 AT 2018.05.07 17:19:47
+(SQL query count) 2 AT 2018.05.07 17:19:47
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 241 AT 2018.05.07 17:19:47
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.07 17:19:55
+(SQL query count) 0 AT 2018.05.07 17:19:55
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.07 17:31:04
+(SQL query count) 0 AT 2018.05.07 17:31:04
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.07 17:31:52
+(SQL query count) 0 AT 2018.05.07 17:31:52

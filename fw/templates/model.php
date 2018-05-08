@@ -1,15 +1,19 @@
 <?php
 
-    /* PATH: app/models/ */
+/* PATH: app/models/ */
+use Kernel\{
+	View,
+	Model
+};
 
-    class /*$modelname*/ extends \Extend\Model{
+class /*$modelname*/ extends \Extend\Model{
 
-        public $sets;
+    public $sets;
 
-        public function __construct(){
+    public function __construct(){
 
-            $this -> sets = new \Sets\/*$setname*/Set;
-
-        }
+        $this -> sets = new \Sets\/*$setname*/Set;
 
     }
+
+}

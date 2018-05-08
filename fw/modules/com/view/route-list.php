@@ -1,3 +1,4 @@
+<?php use Kernel\{View, Module}; ?>
 <?php View::join(Module::pathToModule('com').'view/head') ?>
 
 	<div class="container">

@@ -1,4 +1,5 @@
 <?php
+namespace Kernel;
 
 // DBIO - v2.0 (Connect v4.0))
 
@@ -20,11 +21,11 @@ class Connect{
         $dsn = self::$config['dbtype'] . ':host=' . self::$config['host'] . ';dbname=' . self::$config['dbname'] .';charset=' . self::$config['charset'];
         
         $opt = array(
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
         );
         
-        self::$connect = new PDO($dsn, self::$config['user'], self::$config['password'], $opt);
+        self::$connect = new \PDO($dsn, self::$config['user'], self::$config['password'], $opt);
         
 		if(!self::$connect){
             Err::add('SQL ERROR', 'Error connect');
@@ -45,7 +46,7 @@ class Connect{
         
         Events::register('before_db_query', ['sql' => $sql]);
         
-        $result = strstr($sql, 'SELECT') ? self::$connect -> query($sql) -> fetchAll(PDO::FETCH_ASSOC) : self::$connect -> query($sql);
+        $result = strstr($sql, 'SELECT') ? self::$connect -> query($sql) -> fetchAll(\PDO::FETCH_ASSOC) : self::$connect -> query($sql);
         
         Events::register('after_db_query', ['result' => $result]);
         
@@ -272,7 +273,7 @@ class DBIO{
 //        return self::fq('SHOW COLUMNS FROM `'.$tablename.'`');
         $q = Connect::$connect -> prepare("DESCRIBE `{$tablename}`");
         $q -> execute();
-        return $q -> fetchAll(PDO::FETCH_COLUMN);
+        return $q -> fetchAll(\PDO::FETCH_COLUMN);
         
     }
     

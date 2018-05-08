@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class Validator{
     private static $check_func;
     private static $init_flag;

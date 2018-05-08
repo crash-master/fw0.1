@@ -1,4 +1,12 @@
 <?php
+use Kernel\{
+    Router,
+    Err,
+    Log,
+    Model,
+    Module,
+    View
+};
 
 function dd($var){
     echo '<pre>';
@@ -145,4 +153,19 @@ function linkTo($controller, $args = false){
     
 }
 
-?>
+function fw_scan_dir($path){
+    $dir = @scandir($path);
+    $count = count($dir);
+    $obj = array();
+    for($i=0;$i<$count;$i++){
+        if($dir[$i] == '.' or $dir[$i] == '..')
+            continue;
+        $obj[] = $path.$dir[$i];
+    }
+    return $obj;
+}
+
+function vjoin($name){
+    return View::join($name);
+}
+

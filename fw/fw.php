@@ -1,5 +1,5 @@
 <?php
-
+namespace Kernel;
 header('Access-Control-Allow-Origin: *');
 
 $start_time = microtime(1);
@@ -13,6 +13,7 @@ IncludeControll::modules();
 
 Module::includesAllModules();
 
+PackageControll::init();
 DBIO::start();
 Components::init();
 
@@ -31,4 +32,3 @@ DBIO::end();
 
 dump();
 
-?>

@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class Maker{
     public static $params;
 

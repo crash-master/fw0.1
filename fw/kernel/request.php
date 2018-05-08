@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class Request{
     
     private static $urlTemp;

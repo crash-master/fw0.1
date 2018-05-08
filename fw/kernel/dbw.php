@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class DBW{
     public static $params;
     public static $meth;

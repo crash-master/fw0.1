@@ -1,3 +1,4 @@
+<?php use Kernel\View; use Kernel\Module; ?>
 <?php View::join(Module::pathToModule('com').'view/head') ?>
 
 <script type="text/javascript" src="/<?= Module::pathToModule('com') ?>js/com.js"></script>

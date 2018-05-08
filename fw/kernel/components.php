@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class Components{
 	private static $components;
 	private static $pathToComponentsSchema;

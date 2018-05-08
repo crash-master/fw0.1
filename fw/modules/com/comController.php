@@ -1,12 +1,25 @@
 <?php
 
 namespace Modules;
+use Kernel\{
+    View,
+    Router,
+    Model,
+    Module,
+    Events,
+    Err,
+    Log,
+    Components,
+    CodeTemplate,
+    Config,
+    Maker
+};
 
 class comController{
     
     public function help(){
         
-        return \View::make(\Module::pathToModule('com').'view/help', [
+        return View::make(Module::pathToModule('com').'view/help', [
             'breadcrumbs' => ['Com' => '/com', 'Help' => '/com/help']
         ]);
         
@@ -14,7 +27,7 @@ class comController{
     
     public function index(){
         
-        return \View::make(\Module::pathToModule('com').'view/about', [
+        return View::make(Module::pathToModule('com').'view/about', [
             'breadcrumbs' => ['Com' => '/com']
         ]);
         
@@ -22,7 +35,7 @@ class comController{
     
     public function eventsList(){
         
-        $events = \Events::getList();
+        $events = Events::getList();
         
         $html = '<h2>Events</h2>';
         
@@ -34,7 +47,7 @@ class comController{
         
         $html .= '<h3>Waste Events</h3>';
         
-        $waste = \Events::getWaste();
+        $waste = Events::getWaste();
         
         foreach($waste as $name => $args){
             
@@ -58,8 +71,8 @@ class comController{
     }
 
     public function showAllComponents(){
-        return \View::make(\Module::pathToModule('com').'view/component-list', [
-            'components' => \Components::getAll(),
+        return View::make(Module::pathToModule('com').'view/component-list', [
+            'components' => Components::getAll(),
             'breadcrumbs' => ['Com' => '/com', 'Help' => '/com/help', 'Components' => '/com/components']
         ]);
     }
@@ -68,7 +81,7 @@ class comController{
         
         if($name){
             
-            \CodeTemplate::create('controller', ['name' => $name, 'filename' => $name.'Controller']);
+            CodeTemplate::create('controller', ['name' => $name, 'filename' => $name.'Controller']);
             
             return 'TRUE';
             
@@ -82,7 +95,7 @@ class comController{
         
         if($name){
 
-            \CodeTemplate::create('set', ['setname' => $name, 'tablename' => $name, 'filename' => $name]);
+            CodeTemplate::create('set', ['setname' => $name, 'tablename' => $name, 'filename' => $name]);
 
             return 'TRUE';
 
@@ -96,7 +109,7 @@ class comController{
 
         if($name){
 
-            \CodeTemplate::create('model', ['modelname' => $name, 'setname' => $name, 'filename' => $name]);
+            CodeTemplate::create('model', ['modelname' => $name, 'setname' => $name, 'filename' => $name]);
 
             return 'TRUE';
 
@@ -110,7 +123,7 @@ class comController{
 
         if($name){
 
-            \CodeTemplate::create('migration', ['name' => $name, 'filename' => $name.'Migration']);
+            CodeTemplate::create('migration', ['name' => $name, 'filename' => $name.'Migration']);
 
             return 'TRUE';
 
@@ -134,29 +147,29 @@ class comController{
     }
     
     public function migrationUpAll(){
-        if(\Config::get('system -> migration') == 'on'){
-            if(\Maker::refreshMigration())
+        if(Config::get('system -> migration') == 'on'){
+            if(Maker::refreshMigration())
                 return 'TRUE';
         }
-        \Err::add("Err COM", 'Migrations is off in config');
+        Err::add("Err COM", 'Migrations is off in config');
         return 'FALSE';
         
     }
     
     public function migrationDownAll(){
-        if(\Config::get('system -> migration') == 'on'){
-            if(\Maker::unsetAllMigration())
+        if(Config::get('system -> migration') == 'on'){
+            if(Maker::unsetAllMigration())
                 return 'TRUE';
         }
 
-        \Err::add("Err COM", 'Migrations is off in config');
+        Err::add("Err COM", 'Migrations is off in config');
         return 'FALSE';
 
     }
     
     public function migrationDown($name){
 
-        if(\Config::get('system -> migration') == 'on'){
+        if(Config::get('system -> migration') == 'on'){
         
             if(!file_exists('app/migrations/'.$name.'Migration.php')){
                 
@@ -164,7 +177,7 @@ class comController{
                 
             }
             
-            if(\Maker::unsetMigration([NULL, $name])){
+            if(Maker::unsetMigration([NULL, $name])){
                 
                 return 'TRUE';
                 
@@ -172,8 +185,8 @@ class comController{
 
         }
 
-        \Err::add("Err COM", 'Migrations is off in config');
-        \Err::add('ERR Com',"Migration {$name} was not unset");
+        Err::add("Err COM", 'Migrations is off in config');
+        Err::add('ERR Com',"Migration {$name} was not unset");
         
         return 'TRUE';
         
@@ -187,9 +200,9 @@ class comController{
 
         }
 
-        if(!\Maker::setMigration([NULL, $name])){
+        if(!Maker::setMigration([NULL, $name])){
 
-            \Err::add('ERR Com',"Migration {$name} was not unset");
+            Err::add('ERR Com',"Migration {$name} was not unset");
 
             return 'FALSE';
 
@@ -201,7 +214,7 @@ class comController{
     
     public function routeList(){
        
-        $cont = \Router::getControllerList();
+        $cont = Router::getControllerList();
 
         if(isset($cont['post'])){
             foreach($cont['post'] as $variableAndRoute => $action){
@@ -216,7 +229,7 @@ class comController{
             }
         }
 
-        return \View::make(\Module::pathToModule('com').'view/route-list', [
+        return View::make(Module::pathToModule('com').'view/route-list', [
             'routes' => $cont,
             'breadcrumbs' => ['Com' => '/com', 'Help' => '/com/help', 'Routes' => '/com/routes']
         ]);

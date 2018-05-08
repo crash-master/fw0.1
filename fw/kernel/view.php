@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class View{
     private static $vars;
     private static $currentPage;
@@ -25,32 +27,47 @@ class View{
         return self::$currentPage;
     }
 
-    private static function makeAndParse($name){
-        $page = './resources/view/'.$name.'.php';
-        if(!file_exists($page)){
-            if(file_exists($name.'.php')){
-                $page = $name.'.php';
-            }else
-                return false;
+    private static function searchFile($name){
+        $dirList = ['./resources/view/'];
+        $packages = PackageControll::getPackageList();
+        $count = count($packages['path']);
+        for($i=0;$i<$count;$i++){
+            $dirList[] = $packages['path'][$i] . '/resources/view/';
         }
-        ob_start();
 
+        $count = count($dirList);
+        for($i=0;$i<$count;$i++){
+            $file = $dirList[$i].$name;
+            if(file_exists($file)){
+                return $file;
+            }else{
+                if(file_exists($file.'.php')){
+                    return $file.'.php';
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private static function makeAndParse($name){
+        $file = self::searchFile($name);
+        if(!$file)
+            return false;
+
+        ob_start();
         if(!is_null(self::$vars))
             extract(self::$vars);
-        require_once($page);
+
+        require_once($file);
 
         $res = ob_get_clean();
         return $res;
     }
 
     public static function join($name){
-        $file = './resources/view/'.$name.'.php';
-        if(!file_exists($file)){
-            if(file_exists($name.'.php')){
-                $file = $name.'.php';
-            }else
-                return false;
-        }
+        $file = self::searchFile($name);
+        if(!$file) return false;
         Components::callToAction($name);
         if(!is_null(self::$vars))
             extract(self::$vars);

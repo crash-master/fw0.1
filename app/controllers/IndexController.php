@@ -1,4 +1,8 @@
 <?php
+use Kernel\{
+	Router,
+	View
+};
 
 class indexController extends \Extend\Controller{
 

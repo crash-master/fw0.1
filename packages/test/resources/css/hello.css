@@ -1,0 +1,22 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: verdana;
+}
+
+body{
+	background: #fefefe;
+}
+
+.wrapper{
+	width: 800px;
+	margin: auto;
+	margin-top: 40vh;
+	text-align: center;
+}
+
+.hello{
+	font-size: 95px;
+	color: #aaa;
+}

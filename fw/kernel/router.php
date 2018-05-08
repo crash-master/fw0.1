@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class Router{
 	private static $data;
     private static $viewfunc;
@@ -163,7 +165,7 @@ class Router{
     
     public static function call($classname, $methname){
         
-        $reflectionMethod = new ReflectionMethod($classname, $methname);
+        $reflectionMethod = new \ReflectionMethod($classname, $methname);
 
         $methParams = $reflectionMethod -> getParameters();
 

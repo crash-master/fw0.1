@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class IncludeControll{
     public static $dirs;
     public static $listTheInclude;
@@ -52,7 +54,7 @@ class IncludeControll{
         
     }
 
-    private static function inc($files){
+    public static function inc($files){
         $count = count($files);
         for($i=0;$i<$count;$i++){
             include_once($files[$i]);

@@ -1,4 +1,6 @@
 <?php
+namespace Kernel;
+
 class DBWService{
     public $table = '';
     public $rowname = '';

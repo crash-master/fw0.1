@@ -3,6 +3,10 @@
 /* PATH: app/sets/ */
 
 namespace Sets;
+use Kernel\{
+	View,
+	Model
+};
 
 class /*$setname*/Set extends \Extend\Set{
 

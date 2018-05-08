@@ -1,6 +1,10 @@
 <?php
 
 /* PATH: app/migrations/ */
+use Kernel\{
+    View,
+    Model
+};
 
 class /*$name*/Migration extends \Extend\Migration{
 

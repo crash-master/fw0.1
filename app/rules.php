@@ -1,5 +1,5 @@
 <?php
-
+use Kernel\Validator;
 // Rules
 
 Validator::addRule('email', function($mail){

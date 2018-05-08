@@ -28,6 +28,17 @@ class View{
     }
 
     private static function searchFile($name){
+        list($rootDir, $secondDir) = explode('/', $name);
+        if($rootDir == 'fw' && $secondDir == 'modules'){
+            if(file_exists($name)){
+                return $name;
+            }else{
+                if(file_exists($name.'.php')){
+                    return $name.'.php';
+                }
+            }
+        }
+
         $dirList = ['./resources/view/'];
         $packages = PackageControll::getPackageList();
         $count = count($packages['path']);

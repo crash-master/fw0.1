@@ -173,3 +173,170 @@
 (Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:44:07
 (SQL query count) 0 AT 2018.05.08 12:44:07
 (PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:44:07
+
+(Sys) Time of generate page: 0.015001058578491 AT 2018.05.08 12:50:28
+(SQL query count) 0 AT 2018.05.08 12:50:28
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:50:30
+(SQL query count) 0 AT 2018.05.08 12:50:30
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:50:31
+(SQL query count) 0 AT 2018.05.08 12:50:31
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.08 12:50:31
+(SQL query count) 0 AT 2018.05.08 12:50:31
+
+(Sys) Time of generate page: 0.010001182556152 AT 2018.05.08 12:50:31
+(SQL query count) 0 AT 2018.05.08 12:50:31
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:50:32
+(SQL query count) 0 AT 2018.05.08 12:50:32
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:50:32
+(SQL query count) 0 AT 2018.05.08 12:50:32
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:50:33
+(SQL query count) 0 AT 2018.05.08 12:50:33
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:50:33
+(SQL query count) 0 AT 2018.05.08 12:50:33
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.05.08 12:50:33
+(SQL query count) 0 AT 2018.05.08 12:50:33
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.08 12:50:33
+(SQL query count) 0 AT 2018.05.08 12:50:33
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:50:33
+(SQL query count) 0 AT 2018.05.08 12:50:33
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:50:34
+(SQL query count) 0 AT 2018.05.08 12:50:34
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:50:34
+(SQL query count) 0 AT 2018.05.08 12:50:34
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.08 12:50:34
+(SQL query count) 0 AT 2018.05.08 12:50:34
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:50:34
+(SQL query count) 0 AT 2018.05.08 12:50:34
+
+(Sys) Time of generate page: 0.021000862121582 AT 2018.05.08 12:56:25
+(SQL query count) 0 AT 2018.05.08 12:56:25
+
+(Sys) Time of generate page: 0.017000913619995 AT 2018.05.08 12:56:27
+(SQL query count) 0 AT 2018.05.08 12:56:27
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:56:28
+(SQL query count) 0 AT 2018.05.08 12:56:28
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:56:29
+(SQL query count) 0 AT 2018.05.08 12:56:29
+(PHP ERR) Invalid argument supplied for foreach() G:\server\OSPanel\domains\fw01\fw\modules\com\view\route-list.php in line 16 AT 2018.05.08 12:56:29
+
+(Sys) Time of generate page: 0.017001152038574 AT 2018.05.08 12:56:30
+(SQL query count) 0 AT 2018.05.08 12:56:30
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:56:31
+(SQL query count) 0 AT 2018.05.08 12:56:31
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:56:32
+(SQL query count) 0 AT 2018.05.08 12:56:32
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:56:51
+(SQL query count) 0 AT 2018.05.08 12:56:51
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:56:51
+
+(Sys) Time of generate page: 0.0090007781982422 AT 2018.05.08 12:56:51
+(SQL query count) 0 AT 2018.05.08 12:56:51
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:56:51
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:56:51
+(SQL query count) 0 AT 2018.05.08 12:56:51
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:56:51
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:56:52
+(SQL query count) 0 AT 2018.05.08 12:56:52
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:56:52
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:56:52
+(SQL query count) 0 AT 2018.05.08 12:56:52
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:56:52
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.08 12:58:39
+(SQL query count) 0 AT 2018.05.08 12:58:39
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:39
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:58:39
+(SQL query count) 0 AT 2018.05.08 12:58:39
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:39
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.08 12:58:40
+(SQL query count) 0 AT 2018.05.08 12:58:40
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:40
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 12:58:41
+(SQL query count) 0 AT 2018.05.08 12:58:41
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:41
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:58:41
+(SQL query count) 0 AT 2018.05.08 12:58:41
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 12:58:41
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 12:59:37
+(SQL query count) 0 AT 2018.05.08 12:59:37
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 13:00:00
+(SQL query count) 0 AT 2018.05.08 13:00:00
+
+(Sys) Time of generate page: 0.010999917984009 AT 2018.05.08 13:00:13
+(SQL query count) 0 AT 2018.05.08 13:00:13
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.05.08 13:00:16
+(SQL query count) 0 AT 2018.05.08 13:00:16
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 126 AT 2018.05.08 13:00:16
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.08 13:03:10
+(SQL query count) 0 AT 2018.05.08 13:03:10
+
+(Sys) Time of generate page: 0.010999917984009 AT 2018.05.08 13:03:18
+(SQL query count) 0 AT 2018.05.08 13:03:18
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.05.08 13:03:25
+(SQL query count) 0 AT 2018.05.08 13:03:25
+(PHP ERR) Undefined variable: item_name G:\server\OSPanel\domains\fw01\packages\test\resources\view\menu.php in line 6 AT 2018.05.08 13:03:25
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.08 13:04:41
+(SQL query count) 0 AT 2018.05.08 13:04:41
+(Components) Component with name 'Menu' already exist AT 2018.05.08 13:04:41
+(PHP ERR) Undefined variable: item_name G:\server\OSPanel\domains\fw01\packages\test\resources\view\menu.php in line 6 AT 2018.05.08 13:04:41
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.08 13:05:07
+(SQL query count) 0 AT 2018.05.08 13:05:07
+(Components) Component with name 'Menu' already exist AT 2018.05.08 13:05:07
+(PHP ERR) Undefined variable: item_name G:\server\OSPanel\domains\fw01\packages\test\resources\view\menu.php in line 6 AT 2018.05.08 13:05:07
+
+(Sys) Time of generate page: 0.010001182556152 AT 2018.05.08 13:05:57
+(SQL query count) 0 AT 2018.05.08 13:05:57
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 130 AT 2018.05.08 13:05:57

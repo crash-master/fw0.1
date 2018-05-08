@@ -6,6 +6,6 @@ use Kernel\Components;
 // 	'controller2@action2'
 // ]]);
 
-Components::create('Menu', ['menu' => [
+Components::create('main_menu', ['menu' => [
 	'\test\IndexController@menu'
 ]]);

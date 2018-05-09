@@ -31,6 +31,8 @@ class Com{
         
         Router::get('/com/migrations/down', 'Modules\\comController@migrationDownAll');
 
+        Router::get('/com/migrations/list', 'Modules\\comController@migrationList');
+
         Router::get('/com/migrations/refresh/{name}', 'Modules\\comController@migrationRefresh');
 
         Router::get('/com/migrations/refresh', 'Modules\\comController@migrationRefreshAll');

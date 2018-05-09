@@ -1,0 +1,61 @@
+
+
+(Sys) Time of generate page: 0.02000093460083 AT 2018.05.09 13:10:07
+(SQL query count) 0 AT 2018.05.09 13:10:07
+
+(Sys) Time of generate page: 0.012001037597656 AT 2018.05.09 13:10:11
+(SQL query count) 0 AT 2018.05.09 13:10:11
+
+(Sys) Time of generate page: 0.017000913619995 AT 2018.05.09 13:10:13
+(SQL query count) 0 AT 2018.05.09 13:10:13
+
+(Sys) Time of generate page: 0.01200008392334 AT 2018.05.09 15:39:30
+(SQL query count) 0 AT 2018.05.09 15:39:30
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 15:39:31
+(SQL query count) 0 AT 2018.05.09 15:39:31
+
+(Maker) Set migration 'Test1' AT 2018.05.09 15:39:38
+(CoreTemplate::create()) Template 'app/sets/Test1.php' was generated AT 2018.05.09 15:39:38
+(CoreTemplate::create()) Template 'app/models/Test1.php' was generated AT 2018.05.09 15:39:38
+(Sys) Time of generate page: 0.22401309013367 AT 2018.05.09 15:39:38
+(SQL query count) 1 AT 2018.05.09 15:39:38
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 247 AT 2018.05.09 15:39:38
+
+(Maker) Unset migration 'Test1' AT 2018.05.09 15:42:59
+(Maker) Set migration 'Test1' AT 2018.05.09 15:43:00
+(Maker) Set migration 'Test2' AT 2018.05.09 15:43:00
+(CoreTemplate::create()) Template 'app/sets/Test2.php' was generated AT 2018.05.09 15:43:00
+(CoreTemplate::create()) Template 'app/models/Test2.php' was generated AT 2018.05.09 15:43:00
+(Sys) Time of generate page: 0.3520200252533 AT 2018.05.09 15:43:00
+(SQL query count) 5 AT 2018.05.09 15:43:00
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 247 AT 2018.05.09 15:43:00
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 15:43:17
+(SQL query count) 0 AT 2018.05.09 15:43:17
+
+(Maker) Unset migration 'Test1' AT 2018.05.09 15:43:19
+(Maker) Unset migration 'Test2' AT 2018.05.09 15:43:19
+(Sys) Time of generate page: 0.20101094245911 AT 2018.05.09 15:43:19
+(SQL query count) 4 AT 2018.05.09 15:43:19
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 15:43:28
+(SQL query count) 0 AT 2018.05.09 15:43:28
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.09 15:43:28
+(SQL query count) 0 AT 2018.05.09 15:43:28
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 15:43:29
+(SQL query count) 0 AT 2018.05.09 15:43:29
+
+(Sys) Time of generate page: 0.018001079559326 AT 2018.05.09 16:23:09
+(SQL query count) 0 AT 2018.05.09 16:23:09
+
+(Sys) Time of generate page: 0.017000913619995 AT 2018.05.09 16:23:23
+(SQL query count) 0 AT 2018.05.09 16:23:23
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 16:23:27
+(SQL query count) 0 AT 2018.05.09 16:23:27
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 16:28:49
+(SQL query count) 0 AT 2018.05.09 16:28:49

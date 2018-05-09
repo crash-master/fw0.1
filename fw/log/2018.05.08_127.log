@@ -340,3 +340,16 @@
 (Sys) Time of generate page: 0.010001182556152 AT 2018.05.08 13:05:57
 (SQL query count) 0 AT 2018.05.08 13:05:57
 (PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method test\IndexController::menu() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\components.php in line 130 AT 2018.05.08 13:05:57
+
+(Sys) Time of generate page: 0.025001049041748 AT 2018.05.08 13:08:23
+(SQL query count) 0 AT 2018.05.08 13:08:23
+
+(Sys) Time of generate page: 0.017000913619995 AT 2018.05.08 15:04:41
+(SQL query count) 0 AT 2018.05.08 15:04:41
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.08 15:04:42
+(SQL query count) 0 AT 2018.05.08 15:04:42
+
+(CoreTemplate::create()) Template 'app/migrations/Test1Migration.php' was generated AT 2018.05.08 15:05:18
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.05.08 15:05:18
+(SQL query count) 0 AT 2018.05.08 15:05:18

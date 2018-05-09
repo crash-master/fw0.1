@@ -1,10 +1,6 @@
 <?php
 
 /* PATH: app/models/ */
-use Kernel\{
-	View,
-	Model
-};
 
 class /*$modelname*/ extends \Extend\Model{
 

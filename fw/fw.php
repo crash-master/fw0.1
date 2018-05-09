@@ -14,6 +14,7 @@ IncludeControll::modules();
 Module::includesAllModules();
 
 PackageControll::init();
+Maker::getMigrationList();
 DBIO::start();
 Components::init();
 

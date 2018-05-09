@@ -1,14 +1,14 @@
 <?php
 
-/* PATH: app/sets/ */
+/*  Automatically was generated from a template fw/templates/set.php */
 
 namespace Sets;
 
-class /*$setname*/Set extends \Extend\Set{
+class Test1Set extends \Extend\Set{
 
     public function tableName(){ 
 
-        return '/*$tablename*/'; 
+        return 'Test1'; 
 
     }
 

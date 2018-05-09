@@ -59,6 +59,11 @@ class Connect{
         
 		return $result;
 	}
+
+    public static function getTableList(){
+        $sql = 'SHOW TABLES';
+        return self::query($sql) -> fetchAll(\PDO::FETCH_COLUMN);
+    }
 }
 
 class DBIO{
@@ -290,6 +295,10 @@ class DBIO{
     
     public static function getStatusOfTables(){
         return self::fq('SHOW TABLE STATUS FROM `'.Connect::$config['dbname'].'`');
+    }
+
+    public static function getTableList(){
+        return Connect::getTableList();
     }
     
     public static function getCountResults($tablename = false, $where = false){

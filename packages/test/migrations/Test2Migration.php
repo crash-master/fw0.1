@@ -1,17 +1,17 @@
 <?php
 
-/* PATH: app/migrations/ */
+/*  Automatically was generated from a template fw/templates/migration.php */
 use Kernel\{
     DBW
 };
 
-class /*$name*/Migration extends \Extend\Migration{
+class Test2Migration extends \Extend\Migration{
 
     public static function up(){
 
         // Create tables in db
 
-        DBW::create('/*$name*/',function($t){
+        DBW::create('Test2',function($t){
             $t -> datetime('date');
         });
 
@@ -21,7 +21,7 @@ class /*$name*/Migration extends \Extend\Migration{
 
         // Drop tables from db
 
-        DBW::drop('/*$name*/');
+        DBW::drop('Test2');
 
     }
 

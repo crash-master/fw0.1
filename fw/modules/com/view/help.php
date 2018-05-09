@@ -88,6 +88,14 @@
         <p class="desciption">Refresh all migrations</p>
 
     </div>
+
+    <div class="col-md-12">
+
+        <a href="/com/migrations/list">/com/migrations/list</a>
+
+        <p class="desciption">View migration list</p>
+
+    </div>
     
     <div class="col-md-12">
         <h3>Create</h3>

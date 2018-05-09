@@ -12,7 +12,8 @@ use Kernel\{
     Components,
     CodeTemplate,
     Config,
-    Maker
+    Maker,
+    PackageControll
 };
 
 class comController{
@@ -210,6 +211,33 @@ class comController{
 
         return 'TRUE';
 
+    }
+
+    public function migrationList(){
+        $migs = Maker::getMigrationList();
+        $packages = PackageControll::getPackageList();
+        $packages['name'][] = 'app';
+
+        $count = count($packages['name']);
+        $countMigs = count($migs);
+        $arr = [];
+        for($i=0;$i<$count;$i++){
+            if(!isset($arr[$packages['name'][$i]])){
+                $arr[$packages['name'][$i]] = [];
+            }
+
+            for($n=0;$n<$countMigs;$n++){
+                if($packages['name'][$i] == $migs[$n]['package']){
+                    $arr[$packages['name'][$i]][] = $migs[$n];
+                }
+
+            }
+        }
+
+        return View::make(Module::pathToModule('com').'view/migration-list', [
+            'migrations' => $arr,
+            'breadcrumbs' => ['Com' => '/com', 'Help' => '/com/help', 'Migrations' => '/com/migrations/list']
+        ]);
     }
     
     public function routeList(){

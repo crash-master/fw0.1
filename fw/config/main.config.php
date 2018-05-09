@@ -8,6 +8,8 @@ return [
 
         'modules' => require_once('fw/config/modules.config.php'),
 
+        'packages' => require_once('fw/config/packages.config.php'),
+
         'DB' => require_once('fw/config/db.config.php'),
 
         'migration' => 'on',

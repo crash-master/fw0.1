@@ -8,6 +8,7 @@
 		<h2>Route list</h2>
 
 		<?php foreach($routes as $method => $routeList): ?>
+			<?php if(count($routeList)): ?>
 
 			<ul class="collection with-header">
 
@@ -46,11 +47,10 @@
 					</div>
 
 				</li>
-					
 			<?php endforeach; ?>
 
 			</ul>
-
+			<?php endif; ?>
 		<?php endforeach; ?>
 
 	</div>

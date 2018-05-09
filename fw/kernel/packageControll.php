@@ -6,10 +6,16 @@ class PackageControll{
 		'path' => [],
 		'name' => []
 	];
+	
+	
 	private static $pathToPackgeDir = './packages/';
 
 	public static function getPackageList(){
 		return self::$packages;
+	}
+
+	public static function getRealPackageList(){
+		
 	}
 
 	public static function generatePackageList(){

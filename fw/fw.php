@@ -14,11 +14,8 @@ IncludeControll::modules();
 Module::includesAllModules();
 
 PackageControll::init();
-Maker::getMigrationList();
 DBIO::start();
 Components::init();
-
-//IncludeControll::migrationsUp();
 
 Router::run(Config::get('system -> showFuncName'));
 

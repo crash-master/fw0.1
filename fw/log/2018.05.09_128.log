@@ -59,3 +59,74 @@
 
 (Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 16:28:49
 (SQL query count) 0 AT 2018.05.09 16:28:49
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 16:31:20
+(SQL query count) 0 AT 2018.05.09 16:31:20
+
+(Sys) Time of generate page: 0.017001152038574 AT 2018.05.09 16:36:00
+(SQL query count) 0 AT 2018.05.09 16:36:00
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.09 16:36:00
+(SQL query count) 0 AT 2018.05.09 16:36:00
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.09 16:36:01
+(SQL query count) 0 AT 2018.05.09 16:36:01
+
+(Sys) Time of generate page: 0.010001182556152 AT 2018.05.09 16:36:01
+(SQL query count) 0 AT 2018.05.09 16:36:01
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.09 16:36:01
+(SQL query count) 0 AT 2018.05.09 16:36:01
+
+(Sys) Time of generate page: 0.014000177383423 AT 2018.05.09 17:45:35
+(SQL query count) 0 AT 2018.05.09 17:45:35
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.09 17:45:41
+(SQL query count) 0 AT 2018.05.09 17:45:41
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.09 17:45:41
+(SQL query count) 0 AT 2018.05.09 17:45:41
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 17:45:43
+(SQL query count) 0 AT 2018.05.09 17:45:43
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.05.09 17:45:43
+(SQL query count) 0 AT 2018.05.09 17:45:43
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.05.09 17:45:46
+(SQL query count) 2 AT 2018.05.09 17:45:46
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.09 17:45:46
+(SQL query count) 0 AT 2018.05.09 17:45:46
+
+(Maker) Set migration 'Test1' AT 2018.05.09 17:45:49
+(Maker) Set migration 'Test2' AT 2018.05.09 17:45:49
+(Sys) Time of generate page: 0.32701897621155 AT 2018.05.09 17:45:49
+(SQL query count) 4 AT 2018.05.09 17:45:49
+(PHP ERR) Undefined index:  G:\server\OSPanel\domains\fw01\fw\kernel\dbio.php in line 247 AT 2018.05.09 17:45:49
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 17:45:50
+(SQL query count) 0 AT 2018.05.09 17:45:50
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.05.09 17:45:52
+(SQL query count) 0 AT 2018.05.09 17:45:52
+
+(Sys) Time of generate page: 0.016999959945679 AT 2018.05.09 18:15:12
+(SQL query count) 0 AT 2018.05.09 18:15:12
+
+(Sys) Time of generate page: 0.010999917984009 AT 2018.05.09 18:15:13
+(SQL query count) 0 AT 2018.05.09 18:15:13
+
+(Sys) Time of generate page: 0.018001079559326 AT 2018.05.09 20:39:41
+(SQL query count) 0 AT 2018.05.09 20:39:41
+(PHP ERR) Invalid argument supplied for foreach() G:\server\OSPanel\domains\fw01\fw\modules\com\view\route-list.php in line 16 AT 2018.05.09 20:39:41
+
+(Sys) Time of generate page: 0.027001142501831 AT 2018.05.09 20:39:43
+(SQL query count) 0 AT 2018.05.09 20:39:43
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 20:39:45
+(SQL query count) 0 AT 2018.05.09 20:39:45
+(PHP ERR) Invalid argument supplied for foreach() G:\server\OSPanel\domains\fw01\fw\modules\com\view\route-list.php in line 16 AT 2018.05.09 20:39:45
+
+(Sys) Time of generate page: 0.011000871658325 AT 2018.05.09 20:42:00
+(SQL query count) 0 AT 2018.05.09 20:42:00

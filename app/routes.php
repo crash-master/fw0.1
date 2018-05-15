@@ -10,4 +10,4 @@ use Kernel\Router;
 
 Router::_404('IndexController@_404');
 
-Router::get('/', 'IndexController@index');
+Router::get('/', 'SiteController@home');

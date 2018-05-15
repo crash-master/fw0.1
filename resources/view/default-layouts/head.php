@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Default template</title>
     <link rel="shortcut icon" href="/frontend/img/favicon.png">
-    <?=View::css([
-        '*' => [],
+    <?= \Kernel\View::css([
+        '*' => ['libs/bootstrap.min.css'],
         'default/404' => ['404.css']
     ]); ?>
     
-    <?=View::js([
+    <?= \Kernel\View::js([
         '*' => []
     ]); ?>
 </head>

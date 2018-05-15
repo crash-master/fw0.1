@@ -5,7 +5,7 @@ use Kernel\Components;
 // 	'controller2@action2'
 // ]]);
 
-Components::create('Menu', ['site/menu' => [
-	'MenuController@items',
-	'LogoController@index'
+Components::create('Meta', ['site/layouts/header' => [
+	'SiteController@meta',
+	'SiteController@nav'
 ]]);

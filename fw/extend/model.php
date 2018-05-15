@@ -1,12 +1,16 @@
 <?php
 
 namespace Extend;
+use Kernel\{
+    DBIO,
+    Essence
+};
 
 class Model{
     
     public function q($sql){
         
-        return \DBIO::fq($sql);
+        return DBIO::fq($sql);
         
     }
     
@@ -14,13 +18,13 @@ class Model{
         
         $where = isset($params['where']) ? $params['where'] : NULL;
         
-        return (new \Essence($this -> sets)) -> get($where, $params);
+        return (new Essence($this -> sets)) -> get($where, $params);
         
     }
     
     public function all($type = "ASC"){
         
-        return (new \Essence($this -> sets)) -> get(NULL, [
+        return (new Essence($this -> sets)) -> get(NULL, [
             
             'order' => ['id', $type]
             
@@ -30,7 +34,7 @@ class Model{
     
     public function first(){
 
-        return (new \Essence($this -> sets)) -> get(NULL, [
+        return (new Essence($this -> sets)) -> get(NULL, [
             
             'order' => ['id', 'ASC'],
             
@@ -42,7 +46,7 @@ class Model{
     
     public function last(){
 
-        return (new \Essence($this -> sets)) -> get(NULL, [
+        return (new Essence($this -> sets)) -> get(NULL, [
 
             'order' => ['id', 'DESC'],
 
@@ -54,30 +58,30 @@ class Model{
     
     public function set($data){
 
-        return (new \Essence($this -> sets)) -> set($data);
+        return (new Essence($this -> sets)) -> set($data);
 
     }
     
     public function remove($where = false){
 
-        return (new \Essence($this -> sets)) -> del($where);
+        return (new Essence($this -> sets)) -> del($where);
 
     }
     
     public function update($data, $where = false){
         
-        return (new \Essence($this -> sets)) -> edit($data, $where);
+        return (new Essence($this -> sets)) -> edit($data, $where);
         
     }
     
     public function length($where = false){
         
-        return (new \Essence($this -> sets)) -> length($where);
+        return (new Essence($this -> sets)) -> length($where);
         
     }
     
     public function truncate(){
-        return (new \Essence($this -> sets)) -> truncate();
+        return (new Essence($this -> sets)) -> truncate();
     }
     
 }

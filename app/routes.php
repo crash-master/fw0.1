@@ -10,4 +10,9 @@ use Kernel\Router;
 
 Router::_404('IndexController@_404');
 
-Router::get('/', 'SiteController@home');
+Router::get('/', 'IndexController@index');
+// Router::get('/{t}/{r}', 'IndexController@test');
+// Router::get('/', function(){
+// 	model('Profile') -> get(['catid', '=', 4]);
+// });
+Router::post('field', 'IndexController@test', '/hello');

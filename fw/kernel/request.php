@@ -2,41 +2,27 @@
 namespace Kernel;
 
 class Request{
-    
     private static $urlTemp;
-    
-    public static function setUrlTemp($urlTemp){
-        
-        self::$urlTemp = $urlTemp;
-        
-    }
-    
-    public static function getArgs(){
-        
-        $url = explode('/',self::getUrl());
+    private static $args;
+    private static $url;
 
-        $uri = explode('/',self::$urlTemp);
-        
-        if(!(strstr(self::$urlTemp, '{') and strstr(self::$urlTemp,'}')))
-            return false;
+    public static function getArgs($urlTemp){
+        self::$urlTemp = $urlTemp; 
+        $url = explode('/',self::getUrl());
+        $uri = explode('/',self::$urlTemp); 
         
         $count = count($url);
-        
         for($i=0;$i<$count;$i++){
-            
-            if(!(strstr($uri[$i], '{') and strstr($uri[$i],'}')))
+            if(strpos($uri[$i], '{') === false)
                continue;
                
                $name = explode('{',$uri[$i]);
-               
                list($name) = explode('}',$name[1]);
-            
                $vars[$name] = $url[$i];
-            
         }
-               
+            
+        self::$args = $vars;
         return $vars;
-        
     }
     
     public static function getAll(){
@@ -46,35 +32,32 @@ class Request{
     public static function postAll(){
         return $_POST;
     }
-    
+
+    public static function ParseURLModRewrite(){
+        $url = $_SERVER['REQUEST_URI'];
+        if(strpos($url, '?') !== false){
+            list($url) = explode('?', $url);
+        }
+        $len = strlen($url);
+        if($url[$len - 1] == '/' and $len > 1){
+            $url = substr($url,0,$len - 1);
+        }
+
+        self::$url = $url;
+        return $url;
+    }
+
     public static function getUrl(){
-        return $_SERVER['REQUEST_URI'];
+        return empty(self::$url) ? self::ParseURLModRewrite() : self::$url;
     }
     
     private static function fromUrl($item){
-        
         $url = explode('/',self::getUrl());
-        
         return urldecode($url[$item]);
-        
     }
     
     public static function get($params = false){
         if(!$params) return self::getAll();
-        
-        if(is_int($params))
-            return self::fromUrl($params);
-        
-        if(is_array($params)){
-            $res = array();
-            $count = count($params);
-            for($i=0;$i<$count;$i++){
-                if(isset($_GET[$params[$i]])){
-                    $res[$params[$i]] = $_GET[$params[$i]];
-                }
-            }
-            return $res;
-        }
         return $_GET[$params];
     }
     
@@ -116,4 +99,3 @@ class Request{
         return self::clearGET() and self::clearPOST();
     }
 }
-?>

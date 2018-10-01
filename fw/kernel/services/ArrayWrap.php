@@ -1,7 +1,7 @@
 <?php
-namespace Kernel;
+namespace Kernel\Services;
 
-class JSONDB{
+class ArrayWrap{
 
     private $data;
     private $config;
@@ -9,19 +9,13 @@ class JSONDB{
     public $lang;
     
     public function __construct($path, $json = true){
-        
         $this -> init($path, $json);
-        
         $this -> lang = $json ? 'json' : 'php';
-        
         $this -> path = $path;
-        
     }
 
     public function init($path, $json){
-        
         $this -> data = $json ? json_decode(file_get_contents($path),true) : require_once($path);
-        
         return false;
     }
 
@@ -30,7 +24,6 @@ class JSONDB{
     }
 
     public function get($name){
-
         if(strstr($name,'->')){
             $part = explode('->',$name);
             $count = count($part);
@@ -84,7 +77,7 @@ class JSONDB{
     
     public function set($name,$val){
         
-        if(strstr($name,'->')){
+        if(strpos($name,'->') !== false){
             $this -> data = $this -> toPath($this -> data,$name,$val);
             return true;
         }
@@ -95,9 +88,7 @@ class JSONDB{
     }
     
     public function del($path){
-        
         $this -> set($path, NULL);
-        
         return true;
     }
 

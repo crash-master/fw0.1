@@ -1,5 +1,8 @@
 <?php
-namespace Kernel;
+namespace Kernel\Services;
+use Kernel\{
+    DBW
+};
 
 class DBWService{
     public $table = '';

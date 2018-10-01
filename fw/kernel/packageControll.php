@@ -1,5 +1,6 @@
 <?php
 namespace Kernel;
+use Kernel\Services\RecursiveScan;
 
 class PackageControll{
 	private static $packages = [
@@ -8,7 +9,7 @@ class PackageControll{
 	];
 	
 	
-	private static $pathToPackgeDir = './packages/';
+	private static $pathToPackgeDir = './packages';
 
 	public static function getPackageList(){
 		return self::$packages;
@@ -19,7 +20,7 @@ class PackageControll{
 	}
 
 	public static function generatePackageList(){
-		$dirObjects = fw_scan_dir(self::$pathToPackgeDir);
+		$dirObjects = ($rs = new RecursiveScan) -> get_dirs(self::$pathToPackgeDir);
 		$count = count($dirObjects);
 		$packages = [];
 		for($i=0;$i<$count;$i++){
@@ -33,9 +34,10 @@ class PackageControll{
 	}
 
 	public static function includePackages(){
+		$rs = new RecursiveScan;
 		$count = count(self::$packages['name']);
 		for($i=0;$i<$count;$i++){
-			$dirObjects = fw_scan_dir(self::$packages['path'][$i].'/');
+			$dirObjects = $rs -> get_dirs(self::$packages['path'][$i]);
 			$phpFiles = [];
 			$countPHPFiles = count($dirObjects);
 			for($j=0;$j<$countPHPFiles;$j++){
@@ -48,7 +50,7 @@ class PackageControll{
 					list(,,,$dirname) = explode('/', $dirObjects[$j]);
 					if($dirname == 'resources')
 						continue;
-					$inDir = fw_scan_dir($dirObjects[$j].'/');
+					$inDir = $rs -> get_dirs($dirObjects[$j]);
 					$countFilesInDir = count($inDir);
 					for($n=0;$n<$countFilesInDir;$n++){
 						list(,$format) = explode('.', basename($inDir[$n]));

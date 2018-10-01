@@ -17,11 +17,8 @@ class Maker{
         @call_user_func(array($params[1].'Migration','up'));
         
         Log::add('Maker', "Set migration '{$params[1]}'");
-        
         CodeTemplate::create('set', ['tablename' => $params[1], 'setname' => $params[1], 'filename' => $params[1]]);
-
         CodeTemplate::create('model', ['modelname' => $params[1], 'setname' => $params[1], 'filename' => $params[1]]);
-
         return true;
     }
 

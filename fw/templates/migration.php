@@ -12,7 +12,7 @@ class /*$name*/Migration extends \Extend\Migration{
         // Create tables in db
 
         DBW::create('/*$name*/',function($t){
-            $t -> datetime('date');
+            $t -> datetime('timestamp');
         });
 
     }

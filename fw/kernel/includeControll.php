@@ -1,57 +1,48 @@
 <?php
 namespace Kernel;
+use Kernel\Services\RecursiveScan;
 
 class IncludeControll{
     public static $dirs;
     public static $listTheInclude;
+    public static $app_files;
+    public static $app_files_name;
 
-    public static function scan($path){
-        $dir = @scandir($path);
-        $count = count($dir);
-        $files = array();
-        for($i=0;$i<$count;$i++){
-            if($dir[$i] == '.' or $dir[$i] == '..' or !strstr($dir[$i],'.'))
-                continue;
-            $files[] = $path.$dir[$i];
-        }
-        return $files;
+    public static function init(){
+		include_once('./fw/kernel/services/RecursiveScan.php');
+		self::loadKernel();
+		self::appRootInit();
+		self::appAutoLoadInit();
+		self::loadModules();
     }
 
-    public static function core(){
+    public static function scan($path){
+        return (new RecursiveScan) -> get_files($path, false);
+    }
+
+    public static function loadKernel(){
+        $rs = new RecursiveScan;
         $files = array_merge(
-            self::scan('./fw/kernel/'),
-            self::scan('./fw/extend/'),
-            
-            self::scan('./app/'),
-            self::scan('./app/sets/'),
-            self::scan('./app/migrations/')
+            $rs -> get_files('./fw/kernel'),
+            $rs -> get_files('./fw/extend')
         );
 
         return self::inc($files);
     }
 
-    public static function modules(){
-        
+    public static function loadModules(){
         spl_autoload_register(function($class){
-
             $class = explode("\\", $class);
-
             $class = $class[count($class) - 1];
-
             $class = Module::pathToModulesDir() . $class . '/' . $class . '.php';
 
             if(file_exists($class)){
-
                 include_once($class);
-
                 return true;
-
             }
 
             return false;
-
         });
-        
     }
 
     public static function inc($files){
@@ -62,67 +53,70 @@ class IncludeControll{
         return true;
     }
 
-    private static function getClassNamesFromFiles($files){
-        $count = count($files);
-        $sepword = 'class';
-        $names = array();
-        for($i=0;$i<$count;$i++){
-            $f = file_get_contents($files[$i]);
-            $f = explode($sepword,$f);
-            $countf = count($f);
-            for($k = 1;$k<$countf;$k++){
-                $name = explode('{',$f[$k]);
-                if(strstr($name[0], 'extends'))
-                    $name = explode('extends', $name[0]);
-                $names[] = trim($name[0]);
+    // private static function getClassNamesFromFiles($files){
+    //     $count = count($files);
+    //     $sepword = 'class';
+    //     $names = array();
+    //     for($i=0;$i<$count;$i++){
+    //         $f = file_get_contents($files[$i]);
+    //         $f = explode($sepword,$f);
+    //         $countf = count($f);
+    //         for($k = 1;$k<$countf;$k++){
+    //             $name = explode('{',$f[$k]);
+    //             if(strstr($name[0], 'extends'))
+    //                 $name = explode('extends', $name[0]);
+    //             $names[] = trim($name[0]);
+    //         }
+    //     }
+
+    //     return $names;
+    // }
+
+    public static function appAutoLoadInit(){
+        if(!is_array(self::$app_files)){
+            self::$app_files = [];
+        }
+
+        $dirs = array(
+            './app/models',
+            './app/controllers',
+            './app/migrations',
+            './app/sets'
+        );
+
+        $rs = new RecursiveScan;
+        foreach($dirs as $dir){
+            $files = $rs -> get_files($dir);
+            foreach($files as $file){
+                $filename = explode('/', $file);
+                $filename = strstr($filename[count($filename) - 1], '.', true);
+                self::$app_files[$filename] = $file;
             }
         }
 
-        return $names;
-    }
-
-    public static function customAuto(){
-        self::$dirs = array(
-            './app/models/',
-            './app/controllers/'
-        );
-
-        spl_autoload_register(function ($class){
-            
-            $dirs = array(
-                './app/models/',
-                './app/controllers/'
-            );
-            
-            $count = count($dirs);
-            
-            for($i=0;$i<$count;$i++){
-                
-                $path = $dirs[$i] . $class . '.php';
-            
-                if(file_exists($path)){
-                    
-                    include_once($path);
-                    
-                    return true;
-                    
-                }
-                
+        spl_autoload_register(function ($classname){
+            if(strpos($classname, '\\') !== false){
+                $classname = explode('\\', $classname);
+                $classname = $classname[count($classname) - 1];
             }
-            
+            $app_files = IncludeControll::$app_files;
+            $count = count($app_files);
+            for($i=0;$i<$count;$i++){
+            	if(!isset($app_files[$classname]))
+            		continue;
+                $path = $app_files[$classname];
+                include_once($path);
+                return true;
+            }
             return false;
-            
         });
-
     }
-    
-    // public static function migrationsUp(){
-    //     // dont used
-    //     Maker::cleanMigrations();
-    //     Maker::setAllMigration();
-    // }
 
-    private static function fileList($arr){
+    private static function appRootInit(){
+    	return self::inc(self::scan('./app'));
+    }
+
+    public static function fileList($arr){
         $page = View::getCurrentPage();
         $list = array();
         if(is_array($arr['*']))
@@ -140,43 +134,5 @@ class IncludeControll{
         return $list;
     }
 
-    public static function cssInclude($arr){
-        $list = self::fileList($arr);
-        $path = '/resources/css/';
-
-        $count = count($list);
-        $res = '';
-        for($i=0;$i<$count;$i++){
-            if(!strstr($list[$i],'.css'))
-                $list[$i] .= '.css';
-            if(file_exists('.'.$path.$list[$i])){
-                $list[$i] = $path.$list[$i];
-            }
-
-            $res .= '<link type="text/css" rel="stylesheet" href="'.$list[$i].'">';
-        }
-        return $res;
-    }
-
-    public static function jsInclude($arr){
-        $list = self::fileList($arr);
-        $path = '/resources/js/';
-
-        $count = count($list);
-        $res = '';
-        for($i=0;$i<$count;$i++){
-            if(!strstr($list[$i],'.js'))
-                $list[$i] .= '.js';
-
-            if(file_exists('.'.$path.$list[$i])){
-                $list[$i] = $path.$list[$i];
-            }
-                
-
-            $res .= '<script type="text/javascript" src="'.$list[$i].'"></script>';
-        }
-        return $res;
-    }
 
 }
-?>

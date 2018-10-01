@@ -1,0 +1,274 @@
+
+
+(Log clear) fw/log/2018.05.06_125.log AT 2018.09.30 21:37:02
+(Log clear) fw/log/2018.05.07_126.log AT 2018.09.30 21:37:02
+(Log clear) fw/log/2018.05.08_127.log AT 2018.09.30 21:37:02
+(Log clear) fw/log/2018.05.09_128.log AT 2018.09.30 21:37:02
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:22:47
+(SQL query count) 0 AT 2018.09.30 22:22:47
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:22:47
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:22:47
+(SQL query count) 0 AT 2018.09.30 22:22:47
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:22:47
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:22:47
+(SQL query count) 0 AT 2018.09.30 22:22:47
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:22:47
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:22:48
+(SQL query count) 0 AT 2018.09.30 22:22:48
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:22:48
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:22:48
+(SQL query count) 0 AT 2018.09.30 22:22:48
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:22:48
+
+(Sys) Time of generate page: 0.0260009765625 AT 2018.09.30 22:23:14
+(SQL query count) 0 AT 2018.09.30 22:23:14
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:14
+
+(Sys) Time of generate page: 0.01400089263916 AT 2018.09.30 22:23:31
+(SQL query count) 0 AT 2018.09.30 22:23:31
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:31
+
+(Sys) Time of generate page: 0.016000986099243 AT 2018.09.30 22:23:33
+(SQL query count) 0 AT 2018.09.30 22:23:33
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:33
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:23:41
+(SQL query count) 0 AT 2018.09.30 22:23:41
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:41
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:23:42
+(SQL query count) 0 AT 2018.09.30 22:23:42
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:42
+
+(Sys) Time of generate page: 0.017001152038574 AT 2018.09.30 22:23:43
+(SQL query count) 0 AT 2018.09.30 22:23:43
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:43
+
+(Sys) Time of generate page: 0.010999917984009 AT 2018.09.30 22:23:44
+(SQL query count) 0 AT 2018.09.30 22:23:44
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:23:44
+
+(Sys) Time of generate page: 0.016000986099243 AT 2018.09.30 22:28:05
+(SQL query count) 0 AT 2018.09.30 22:28:05
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:28:05
+
+(Sys) Time of generate page: 0.038002967834473 AT 2018.09.30 22:28:19
+(SQL query count) 0 AT 2018.09.30 22:28:19
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:19
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:28:34
+(SQL query count) 0 AT 2018.09.30 22:28:34
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:34
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:28:36
+(SQL query count) 0 AT 2018.09.30 22:28:36
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:36
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:28:36
+(SQL query count) 0 AT 2018.09.30 22:28:36
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:36
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.09.30 22:28:36
+(SQL query count) 0 AT 2018.09.30 22:28:36
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:36
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:28:36
+(SQL query count) 0 AT 2018.09.30 22:28:36
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:36
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:28:43
+(SQL query count) 0 AT 2018.09.30 22:28:43
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 155 AT 2018.09.30 22:28:43
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:31:52
+(SQL query count) 0 AT 2018.09.30 22:31:52
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 152 AT 2018.09.30 22:31:52
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:32:00
+(SQL query count) 0 AT 2018.09.30 22:32:00
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 152 AT 2018.09.30 22:32:00
+
+(Sys) Time of generate page: 0.01400089263916 AT 2018.09.30 22:35:31
+(SQL query count) 0 AT 2018.09.30 22:35:31
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 151 AT 2018.09.30 22:35:31
+
+(Sys) Time of generate page: 0.01400089263916 AT 2018.09.30 22:36:02
+(SQL query count) 0 AT 2018.09.30 22:36:02
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:36:02
+
+(Sys) Time of generate page: 0.019001960754395 AT 2018.09.30 22:37:54
+(SQL query count) 0 AT 2018.09.30 22:37:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:54
+
+(Sys) Time of generate page: 0.0090007781982422 AT 2018.09.30 22:37:54
+(SQL query count) 0 AT 2018.09.30 22:37:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:54
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:37:54
+(SQL query count) 0 AT 2018.09.30 22:37:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:54
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:37:54
+(SQL query count) 0 AT 2018.09.30 22:37:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:54
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:37:54
+(SQL query count) 0 AT 2018.09.30 22:37:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:54
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.09.30 22:37:55
+(SQL query count) 0 AT 2018.09.30 22:37:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:55
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:37:55
+(SQL query count) 0 AT 2018.09.30 22:37:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:55
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.09.30 22:37:55
+(SQL query count) 0 AT 2018.09.30 22:37:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:55
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:37:55
+(SQL query count) 0 AT 2018.09.30 22:37:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:55
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:37:55
+(SQL query count) 0 AT 2018.09.30 22:37:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:55
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:37:56
+(SQL query count) 0 AT 2018.09.30 22:37:56
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:37:56
+
+(Sys) Time of generate page: 0.02000093460083 AT 2018.09.30 22:39:44
+(SQL query count) 0 AT 2018.09.30 22:39:44
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 154 AT 2018.09.30 22:39:44
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:39:55
+(SQL query count) 0 AT 2018.09.30 22:39:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:39:55
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:40:18
+(SQL query count) 0 AT 2018.09.30 22:40:18
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:18
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:40:18
+(SQL query count) 0 AT 2018.09.30 22:40:18
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:18
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:40:19
+(SQL query count) 0 AT 2018.09.30 22:40:19
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:19
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:40:19
+(SQL query count) 0 AT 2018.09.30 22:40:19
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:19
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.09.30 22:40:19
+(SQL query count) 0 AT 2018.09.30 22:40:19
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:19
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:40:19
+(SQL query count) 0 AT 2018.09.30 22:40:19
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:19
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:40:19
+(SQL query count) 0 AT 2018.09.30 22:40:19
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:19
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:40:20
+(SQL query count) 0 AT 2018.09.30 22:40:20
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:20
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:40:20
+(SQL query count) 0 AT 2018.09.30 22:40:20
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:20
+
+(Sys) Time of generate page: 0.010999917984009 AT 2018.09.30 22:40:29
+(SQL query count) 0 AT 2018.09.30 22:40:29
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:40:29
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:41:07
+(SQL query count) 0 AT 2018.09.30 22:41:07
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:41:07
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:42:07
+(SQL query count) 0 AT 2018.09.30 22:42:07
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:42:07
+
+(Sys) Time of generate page: 0.01400089263916 AT 2018.09.30 22:45:54
+(SQL query count) 0 AT 2018.09.30 22:45:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:54
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:45:54
+(SQL query count) 0 AT 2018.09.30 22:45:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:54
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 22:45:54
+(SQL query count) 0 AT 2018.09.30 22:45:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:54
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 22:45:54
+(SQL query count) 0 AT 2018.09.30 22:45:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:54
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 22:45:54
+(SQL query count) 0 AT 2018.09.30 22:45:54
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:54
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 22:45:55
+(SQL query count) 0 AT 2018.09.30 22:45:55
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 22:45:55
+
+(Sys) Time of generate page: 0.015000820159912 AT 2018.09.30 23:21:25
+(SQL query count) 0 AT 2018.09.30 23:21:25
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:25
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 23:21:25
+(SQL query count) 0 AT 2018.09.30 23:21:25
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:25
+
+(Sys) Time of generate page: 0.010000944137573 AT 2018.09.30 23:21:25
+(SQL query count) 0 AT 2018.09.30 23:21:25
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:25
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 23:21:26
+(SQL query count) 0 AT 2018.09.30 23:21:26
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:26
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 23:21:26
+(SQL query count) 0 AT 2018.09.30 23:21:26
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:26
+
+(Sys) Time of generate page: 0.0089998245239258 AT 2018.09.30 23:21:26
+(SQL query count) 0 AT 2018.09.30 23:21:26
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:26
+
+(Sys) Time of generate page: 0.0090010166168213 AT 2018.09.30 23:21:26
+(SQL query count) 0 AT 2018.09.30 23:21:26
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:26
+
+(Sys) Time of generate page: 0.0090000629425049 AT 2018.09.30 23:21:26
+(SQL query count) 0 AT 2018.09.30 23:21:26
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:21:26
+
+(Sys) Time of generate page: 0.013000965118408 AT 2018.09.30 23:29:42
+(SQL query count) 0 AT 2018.09.30 23:29:42
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 100 AT 2018.09.30 23:29:42
+
+(Sys) Time of generate page: 0.012000799179077 AT 2018.09.30 23:31:25
+(SQL query count) 0 AT 2018.09.30 23:31:25
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:31:25
+
+(Sys) Time of generate page: 0.015000820159912 AT 2018.09.30 23:38:59
+(SQL query count) 0 AT 2018.09.30 23:38:59
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method indexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\router.php in line 99 AT 2018.09.30 23:38:59
+
+(Sys) Time of generate page: 0.0099999904632568 AT 2018.09.30 23:39:05
+(SQL query count) 0 AT 2018.09.30 23:39:05
+(PHP ERR) scandir(): (errno 2): No such file or directory G:\server\OSPanel\domains\fw01\fw\kernel\includeControll.php in line 9 AT 2018.09.30 23:39:05

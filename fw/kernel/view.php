@@ -66,6 +66,11 @@ class View{
         if(!$file)
             return false;
 
+        Events::register('before_rendered_page', [
+            'file' => $file,
+            'vars' => self::$vars
+        ]);
+
         ob_start();
         if(!is_null(self::$vars))
             extract(self::$vars);
@@ -79,10 +84,18 @@ class View{
     public static function join($name){
         $file = self::searchFile($name);
         if(!$file) return false;
+        Events::register('before_rendered_layout', [
+            'file' => $file,
+            'name' => $name
+        ]);
         Components::callToAction($name);
         if(!is_null(self::$vars))
             extract(self::$vars);
         require_once($file);
+        Events::register('after_rendered_layout', [
+            'file' => $file,
+            'name' => $name
+        ]);
         return true;
     }
 
@@ -91,11 +104,40 @@ class View{
     }
 
     public static function css($params){
-        return IncludeControll::cssInclude($params);
+        $list = IncludeControll::fileList($params);
+        $path = '/resources/css/';
+
+        $count = count($list);
+        $res = '';
+        for($i=0;$i<$count;$i++){
+            if(!strstr($list[$i],'.css'))
+                $list[$i] .= '.css';
+            if(file_exists('.'.$path.$list[$i])){
+                $list[$i] = $path.$list[$i];
+            }
+
+            $res .= '<link type="text/css" rel="stylesheet" href="'.$list[$i].'">';
+        }
+        return $res;
     }
 
     public static function js($params){
-        return IncludeControll::jsInclude($params);
+        $list = IncludeControll::fileList($params);
+        $path = '/resources/js/';
+
+        $count = count($list);
+        $res = '';
+        for($i=0;$i<$count;$i++){
+            if(!strstr($list[$i],'.js'))
+                $list[$i] .= '.js';
+
+            if(file_exists('.'.$path.$list[$i])){
+                $list[$i] = $path.$list[$i];
+            }
+                
+            $res .= '<script type="text/javascript" src="'.$list[$i].'"></script>';
+        }
+        return $res;
     }
 
     /**

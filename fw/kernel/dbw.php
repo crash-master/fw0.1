@@ -1,5 +1,6 @@
 <?php
 namespace Kernel;
+use Kernel\Services\DBWService;
 
 class DBW{
     public static $params;
@@ -53,7 +54,6 @@ class DBW{
     }
     
     public static function select($data){
-    
         $table = array_keys($data);
         $table = $table[0];
         $params = array(
@@ -133,11 +133,8 @@ class DBW{
     }
     
     public static function getFields($table){
-        
         $data = self::columns($table);
-        
         return $data;
-        
     }
     
     public static function createTime($table){

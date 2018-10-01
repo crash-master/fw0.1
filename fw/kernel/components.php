@@ -119,6 +119,11 @@ class Components{
 			return false;
 		}
 
+		Events::register('before_rendered_component', [
+            'view' => $view,
+            'component' => $component
+        ]);
+
 		foreach($component as $name => $item){
 			if(!is_array($item[$view])){
 				$action = explode('@', $item[$view]);

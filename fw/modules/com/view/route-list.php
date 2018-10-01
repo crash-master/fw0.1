@@ -26,7 +26,7 @@
 
 							<?php if($method == 'get'): ?>
 
-						    	<span title="Action"><?= $action ?></span>
+						    	<span title="Action"><?= is_string($action) ? $action : 'anonymous function(){}' ?></span>
 
 							<?php else: ?>
 								

@@ -5,7 +5,6 @@ use Kernel\Components;
 // 	'controller2@action2'
 // ]]);
 
-Components::create('Meta', ['site/layouts/header' => [
-	'SiteController@meta',
-	'SiteController@nav'
+Components::create('test', ['default-layouts/head' => [
+	'IndexController@qwerty'
 ]]);

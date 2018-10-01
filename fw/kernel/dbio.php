@@ -16,8 +16,7 @@ class Connect{
 		return true;
 	}
 	
-	private static function open_connect(){
-        
+	private static function open_connect(){    
         $dsn = self::$config['dbtype'] . ':host=' . self::$config['host'] . ';dbname=' . self::$config['dbname'] .';charset=' . self::$config['charset'];
         
         $opt = array(
@@ -36,27 +35,16 @@ class Connect{
 	}
 	
 	public static function close_connect(){
-        
         Log::add('SQL query count', self::$countQuery);
-        
 		return true;
 	}
 	
 	public static function query($sql){
-        
         Events::register('before_db_query', ['sql' => $sql]);
-        
-        $result = strstr($sql, 'SELECT') ? self::$connect -> query($sql) -> fetchAll(\PDO::FETCH_ASSOC) : self::$connect -> query($sql);
-        
+        $result = strpos($sql, 'SELECT') !== false ? self::$connect -> query($sql) -> fetchAll(\PDO::FETCH_ASSOC) : self::$connect -> query($sql);
         Events::register('after_db_query', ['result' => $result]);
         
-		if(!$result){
-            Err::add('SQL ERROR', $sql);
-		 	return 0;
-		}
-        
-        self::$countQuery++;
-        
+        self::$countQuery++;     
 		return $result;
 	}
 
@@ -74,16 +62,12 @@ class DBIO{
     }
     
     public static function end(){
-        
         Connect::close_connect();
-        
         return true;
-        
     }
     
     
     public static function select($params){ // $table - string, $rows - array, $where - array, $limit - array(from,count), $sort - DESC || ASC, $many - true || false) || $sql - string
-        
         if(!isset($params['table'])){
             return false;
         }
@@ -117,27 +101,32 @@ class DBIO{
     public static function arrToSqlWhere($where){
         $sql = '';
         $count = count($where);
+        $sql .= ' WHERE ';
         if($count > 3){
-            $sql .= ' WHERE ';
             for($i=0;$i<$count;$i += 3){
-
-                $sql .= '`'.addslashes($where[$i]).'`'.$where[$i+1].'\''.addslashes($where[$i+2]).'\'';
+                if($where[$i+1] == 'IN'){
+                    $sql .= '`'.addslashes($where[$i]).'`'.$where[$i+1].' '.$where[$i+2].' ';
+                }else{
+                    $sql .= '`'.addslashes($where[$i]).'`'.$where[$i+1].'\''.addslashes($where[$i+2]).'\'';
+                }
 
                 if(isset($where[$i + 3])){
                     $sql .= ' ' . strtoupper(addslashes($where[$i + 3])) . ' ';
                     $i++;
                 }
-
             }
-        }else
-            $sql .= ' WHERE `'.addslashes($where[0]).'`'.$where[1].'\''.addslashes($where[2]).'\''; 
-        
+        }else{
+            if($where[1] == 'IN'){
+                $sql .= '`'.addslashes($where[0]).'`'.$where[1].' '.$where[2].' ';
+            }else{
+                $sql .= '`'.addslashes($where[0]).'`'.$where[1].'\''.addslashes($where[2]).'\'';
+            }
+        }
+
         return $sql;
-        
     }
     
     public static function update($params){
-        
         if(!is_array($params)){
             $sql = $params;
         }else{
@@ -302,20 +291,16 @@ class DBIO{
     }
     
     public static function getCountResults($tablename = false, $where = false){
-        
         if(!$tablename)
             return false;
         
         $tablename = addslashes($tablename);
-        
         $sql = "SELECT COUNT(*) FROM `{$tablename}`";
         
         if($where and is_array($where)){
             $sql .= self::arrToSqlWhere($where);
         }
-        
         return self::fq($sql);
-        
     }
     
     public static function truncate($tablename){

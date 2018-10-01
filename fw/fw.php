@@ -5,15 +5,13 @@ header('Access-Control-Allow-Origin: *');
 $start_time = microtime(1);
 session_start();
 
-include_once('kernel/includeControll.php');
+include_once('kernel/IncludeControll.php');
 
-IncludeControll::customAuto();
-IncludeControll::core();
-IncludeControll::modules();
+IncludeControll::init();
 
 Module::includesAllModules();
 
-PackageControll::init();
+// PackageControll::init();
 DBIO::start();
 Components::init();
 

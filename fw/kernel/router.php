@@ -8,6 +8,7 @@ class Router{
     private static $url;
     private static $post;
     private static $request_args;
+    private static $post_flag;
 
 	public static function addRoute($arr){
 		if(empty($arr['route']) or empty($arr['action'])){
@@ -68,7 +69,9 @@ class Router{
             $view(self::call($arr[0], $arr[1]));
 
         }else{  // action404
-            
+            if(self::$post_flag){
+                return true;
+            }
             $f_name = self::$action404;
             
             $ev_params = [
@@ -123,6 +126,7 @@ class Router{
             'params' => is_array($params) ? $params : NULL,
             'method' => 'get'
         ]);
+
         return $reflectionMethod -> invokeArgs(new $classname(), $params);
     }
     
@@ -159,25 +163,25 @@ class Router{
         return true;
     }
 
-    public static function eventsPost(){
+    public static function eventsPost($view){
         $data = Request::post();
         $keys = array_keys($data);
         $count = count($data);
         for($i=0;$i<$count;$i++){
             if(isset(self::$post[$keys[$i]]) or isset(self::$post[$keys[$i].':'.self::$url])){
-
                 $func = (isset(self::$post[$keys[$i]])) ? self::$post[$keys[$i]] : self::$post[$keys[$i].':'.self::$url];
 
                 if(!isset($func['get']) or self::$url == $func['get']){
                     if(is_object($func['action']) or strpos($func['action'],'@') === false){
-                        
+
                         Events::register('call_action', [
                             'actionName' => $func['action'],
                             'params' => $data,
                             'method' => 'post'
                         ]);
                         
-                        self::$view($func['action']());
+                        $view($func['action']());
+                        self::$post_flag = true;
                     }else{
                         $arr = explode('@',$func['action']);
                         
@@ -187,8 +191,9 @@ class Router{
                             'params' => $data,
                             'method' => 'post'
                         ]);
-                        
-                        self::$view(call_user_func(array($arr[0],$arr[1])));
+
+                        $view(call_user_func(array($arr[0],$arr[1])));
+                        self::$post_flag = true;
                     }
                 }
             }
@@ -205,7 +210,7 @@ class Router{
         }
         // Request::clearGet();
 
-        self::eventsPost();
+        self::eventsPost($view);
 		self::routing($view);
 
 		return true;

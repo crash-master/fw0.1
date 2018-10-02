@@ -249,7 +249,6 @@ class Router{
                     return '/' . $route;
                 }
             }
-            return false;
         }
 
         if(is_array($params)){
@@ -260,7 +259,7 @@ class Router{
             return '/' . $route;
         }
         
-        return $data[$actionName];
+        return '/' . $data[$actionName];
     }
 
     private static function controller_name_to_route_link($controller){

@@ -53,6 +53,9 @@ function dd($var){
 }
 
 function redirect($url){
+	if(strpos($url, '@') !== false){
+		$url = linkTo($url);
+	}
 	header('Location: '.$url);
 	return true;
 }

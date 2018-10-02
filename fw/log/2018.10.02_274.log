@@ -324,3 +324,18 @@
 (Sys) Time of generate page: 0.02000093460083 AT 2018.10.02 17:20:25
 (SQL query count) 0 AT 2018.10.02 17:20:25
 (PHP ERR) Non-static method Kernel\IncludeControll::load_one_controller() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\Router.php in line 320 AT 2018.10.02 17:20:25
+
+(Sys) Time of generate page: 0.017001152038574 AT 2018.10.02 17:26:06
+(SQL query count) 0 AT 2018.10.02 17:26:06
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method IndexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\Router.php in line 102 AT 2018.10.02 17:26:06
+
+(Sys) Time of generate page: 0.012000799179077 AT 2018.10.02 17:26:09
+(SQL query count) 0 AT 2018.10.02 17:26:09
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method IndexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\Router.php in line 102 AT 2018.10.02 17:26:09
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.10.02 17:26:09
+(SQL query count) 0 AT 2018.10.02 17:26:09
+(PHP ERR) call_user_func() expects parameter 1 to be a valid callback, non-static method IndexController::_404() should not be called statically G:\server\OSPanel\domains\fw01\fw\kernel\Router.php in line 102 AT 2018.10.02 17:26:09
+
+(Sys) Time of generate page: 0.011001110076904 AT 2018.10.02 17:26:39
+(SQL query count) 0 AT 2018.10.02 17:26:39

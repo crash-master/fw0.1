@@ -10,5 +10,5 @@ use Kernel\Router;
 
 Router::_404('IndexController@_404');
 
-route('IndexController');
-route('/pages', 'PageController@index');
+route('/', 'IndexController@index');
+

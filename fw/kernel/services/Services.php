@@ -52,9 +52,9 @@ function dd($var){
 	die('<pre>'.ddump($var).'</pre>');
 }
 
-function redirect($url){
+function redirect($url, $vars = []){
 	if(strpos($url, '@') !== false){
-		$url = linkTo($url);
+		$url = linkTo($url, $vars);
 	}
 	header('Location: '.$url);
 	return true;

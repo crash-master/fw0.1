@@ -257,7 +257,7 @@ class Router{
             foreach($params as $key => $val){     
                 $route = str_replace('{' . $key . '}', $val, $route);     
             }
-            return $route;
+            return '/' . $route;
         }
         
         return $data[$actionName];

@@ -3,7 +3,6 @@ namespace Kernel;
 
 class Components{
 	private static $components;
-	private static $pathToComponentsSchema;
 
 	/**
 	 * [create component]
@@ -97,23 +96,10 @@ class Components{
 	}
 
 	/**
-	 * [init function for initialisation ]
-	 * @param  [string] $path [path to file with components schema]
-	 */
-	public static function init($path = NULL){
-		self::$pathToComponentsSchema = $path ? $path : './app/components.php';
-
-		if(!file_exists(self::$pathToComponentsSchema)){
-			Err::add('Components', 'File components.php (components schema) was not found');
-			return false;
-		}
-	}
-
-	/**
 	 * [callToAction for calling action]
 	 * @param  [string] $view [path to view]
 	 */
-	public static function callToAction($view){
+	public static function callToAction($view, $arguments){
 		$component = self::getOnViewPath($view);
 		if(!count($component)){
 			return false;
@@ -126,16 +112,40 @@ class Components{
 
 		foreach($component as $name => $item){
 			if(!is_array($item[$view])){
-				$action = explode('@', $item[$view]);
-				View::addVars(call_user_func(array($action[0],$action[1])));
+				list($controller, $action) = explode('@', $item[$view]);
+				View::addVars(self::call($controller, $action, $arguments));
 			}else{
 				$count = count($item[$view]);
 				for($i=0; $i<$count; $i++){
-					$action = explode('@', $item[$view][$i]);
-					View::addVars(call_user_func(array($action[0],$action[1])));
+					list($controller, $action) = explode('@', $item[$view][$i]);
+					View::addVars(self::call($controller, $action, $arguments));
 				}
 			}
 		}
 	}
+
+	/**
+	 * [call action]
+	 *
+	 * @param  [string] $controller [controller name]
+	 * @param  [string] $action [action name]
+	 * @param  [array] $args [array with arguments]
+	 *
+	 * @return [string] [layout html code]
+	 */
+	public static function call($controller, $action, $args){   
+        $reflectionMethod = new \ReflectionMethod($controller, $action);
+        $methParams = $reflectionMethod -> getParameters();
+        $params = [];
+        $count = count($methParams);
+
+        for($i=0;$i<$count;$i++){
+            if(isset($args[$methParams[$i] -> name])){
+                $params[] = $args[$methParams[$i] -> name];
+            }
+        }
+
+        return $reflectionMethod -> invokeArgs(new $controller(), $params);
+    }
 
 }

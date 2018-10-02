@@ -81,14 +81,14 @@ class View{
         return $res;
     }
 
-    public static function join($name){
+    public static function join($name, $arr_arguments = []){
         $file = self::searchFile($name);
         if(!$file) return false;
         Events::register('before_rendered_layout', [
             'file' => $file,
             'name' => $name
         ]);
-        Components::callToAction($name);
+        Components::callToAction($name, $arr_arguments);
         if(!is_null(self::$vars))
             extract(self::$vars);
         require_once($file);

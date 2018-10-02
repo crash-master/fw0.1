@@ -7,6 +7,7 @@ class IncludeControll{
     public static $listTheInclude;
     public static $app_files;
     public static $app_files_name;
+    private static $cache_controllers_list;
 
     public static function init(){
 		include_once('./fw/kernel/services/RecursiveScan.php');
@@ -14,6 +15,19 @@ class IncludeControll{
 		self::appRootInit();
 		self::appAutoLoadInit();
 		self::loadModules();
+    }
+
+    public function load_one_controller($controller_name){
+        self::$cache_controllers_list = self::$cache_controllers_list ? self::$cache_controllers_list : (new RecursiveScan) -> get_files('app/controllers');
+        $controllers = self::$cache_controllers_list;
+        foreach($controllers as $controller){
+            if(@strpos($controller, $controller_name) !== false){
+                include_once($controller);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static function scan($path){

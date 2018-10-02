@@ -4,3 +4,5 @@ use Kernel\Components;
 // 	'controller@action',
 // 	'controller2@action2'
 // ]]);
+
+Components::create('test-layouts-args', ['layout' => 'PageController@laytest']);

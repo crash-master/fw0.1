@@ -38,10 +38,7 @@ class Request{
         if(strpos($url, '?') !== false){
             list($url) = explode('?', $url);
         }
-        $len = strlen($url);
-        if($url[$len - 1] == '/' and $len > 1){
-            $url = substr($url,0,$len - 1);
-        }
+        $url = trim($url, '/');
 
         self::$url = $url;
         return $url;
@@ -51,51 +48,58 @@ class Request{
         return empty(self::$url) ? self::ParseURLModRewrite() : self::$url;
     }
     
-    private static function fromUrl($item){
-        $url = explode('/',self::getUrl());
-        return urldecode($url[$item]);
-    }
-    
     public static function get($params = false){
         if(!$params) return self::getAll();
-        return $_GET[$params];
+        return is_array($params) ? self::array_items_from_array($params, $_GET) : $_GET[$params];
     }
     
     public static function post($params = false){
         if(!$params) return self::postAll();
-        
-        if(is_array($params)){
-            $res = array();
-            $count = count($params);
-            for($i=0;$i<$count;$i++){
-                if(isset($_POST[$params[$i]])){
-                    $res[$params[$i]] = $_POST[$params[$i]];
-                }
+        return is_array($params) ? self::array_items_from_array($params, $_POST) : $_POST[$params];
+    }
+
+    private static function array_items_from_array($items, $arr){
+        $res_arr = [];
+        $count = count($items);
+        for($i=0; $i<$count; $i++){
+            if(isset($arr[$items[$i]])){
+                $res_arr[$items[$i]] = $arr[$items[$i]];
             }
-            return $res;
         }
-        return $_POST[$params];
+
+        return $res_items;
+    }
+
+    private static function _clear($arr){
+        $keys = array_keys($arr);
+        $count = count($arr);
+        for($i=0;$i<$count;$i++){
+            $arr[$keys[$i]] = trim(htmlspecialchars($arr[$keys[$i]]));
+        }
+        return $arr;
     }
     
     public static function clearGET(){
-        $keys = array_keys($_GET);
-        $count = count($_GET);
-        for($i=0;$i<$count;$i++){
-            $_GET[$keys[$i]] = trim(strip_tags($_GET[$keys[$i]]));
-        }
+        $_GET = self::_clear($_GET);
+        return true;
+    }
+
+    public static function clear_get(){
+        $_GET = self::_clear($_GET);
         return true;
     }
     
     public static function clearPOST(){
-        $keys = array_keys($_POST);
-        $count = count($_POST);
-        for($i=0;$i<$count;$i++){
-            $_POST[$keys[$i]] = trim(strip_tags($_POST[$keys[$i]]));
-        }
+        $_post = self::_clear($_post);
+        return true;
+    }
+
+    public static function clear_post(){
+        $_post = self::_clear($_post);
         return true;
     }
     
     public static function clear(){
-        return self::clearGET() and self::clearPOST();
+        return self::clear_get() and self::clear_post();
     }
 }

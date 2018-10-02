@@ -13,7 +13,6 @@ Module::includesAllModules();
 
 // PackageControll::init();
 DBIO::start();
-Components::init();
 
 Router::run(Config::get('system -> showFuncName'));
 

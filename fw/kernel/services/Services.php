@@ -109,7 +109,11 @@ function linkTo($controller, $args = false){
 	return Router::linkTo($controller, $args);
 }
 
-function vjoin($name){
-	return View::join($name);
+function vjoin($name, $args){
+	return View::join($name, $args);
+}
+
+function route($param1, $param2 = false, $param3 = false){
+	Router::route_universe($param1, $param2, $param3);
 }
 

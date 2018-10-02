@@ -246,7 +246,7 @@ class Router{
             foreach($post as $var_and_route => $action){
                 if($action['action'] == $actionName){
                     list(,$route) = explode(':', $var_and_route);
-                    return $route;
+                    return '/' . $route;
                 }
             }
             return false;

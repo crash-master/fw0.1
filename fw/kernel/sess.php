@@ -11,7 +11,7 @@ class Sess{
         if(strstr($name,'->'))
             return self::fromPath($name);
         
-        return $_SESSION[$name];
+        return isset($_SESSION[$name]) ? $_SESSION[$name] : NULL;
     }
     
     private static function fromPath($name){

@@ -5,7 +5,7 @@ class View{
     private static $vars;
     private static $currentPage;
 
-    public static function make($name,$arr = NULL,$varname = NULL){
+    public static function make($name, $arr = NULL, $varname = NULL){
         if(!is_array(self::$vars))
             self::$vars = [];
 

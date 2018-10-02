@@ -117,3 +117,6 @@ function route($param1, $param2 = false, $param3 = false){
 	Router::route_universe($param1, $param2, $param3);
 }
 
+function view($layout, $vars = NULL){
+	return View::make($layout, $vars);
+}

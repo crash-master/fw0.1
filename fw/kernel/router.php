@@ -99,9 +99,7 @@ class Router{
                 return true;
             }
             
-            $r = call_user_func(array($action_404[0], $action_404[1]));
-            $view($r);
-
+            $view(self::call($action_404[0], $action_404[1]));
         }
 
 		return true;
@@ -181,7 +179,7 @@ class Router{
                             'method' => 'post'
                         ]);
 
-                        $view(call_user_func(array($arr[0],$arr[1])));
+                        $view(self::call($arr[0],$arr[1]));
                         self::$post_flag = true;
                     }
                 }
@@ -219,17 +217,20 @@ class Router{
 		return count(self::$data);
 	}
 
-    public static function get($route,$action){
+    public static function get($route, $action){
         self::addRoute(array('route'=>$route,'action'=>$action));
     }
 
-    public static function post($post,$action,$get = false){
+    public static function post($post, $action, $get = false){
         if(!$post or !$action) return false;
 
-        if($get)
+        if($get){
+            $get = ltrim($get, '/');
             self::$post[$post.':'.$get]['action'] = $action;
-        else
+        }
+        else{
             self::$post[$post]['action'] = $action;
+        }
 
         return true;
     }

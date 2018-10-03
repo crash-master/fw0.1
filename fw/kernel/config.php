@@ -3,15 +3,24 @@ namespace Kernel;
 
 class Config{
     protected static $db;
+    protected static $conf;
 
     protected static function init(){
-        self::$db = new Services\ArrayWrap('./fw/config/main.config.php', false);
+        $config_file = require_once('./fw/config/main.config.php');
+        self::$db = new Services\ArrayWrap($config_file, false);
+        self::$conf = new Conf($config_file);
     }
 
-    public static function get($path){
+    public static function conf(){
+        return self::$conf;
+    }
+
+    public static function get($path = false){
         if(!self::$db)
             self::init();
 
+        if(!$path)
+            return self::conf();
         return self::$db -> get($path);
     }
 

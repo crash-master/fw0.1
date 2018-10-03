@@ -28,6 +28,9 @@ class View{
     }
 
     private static function searchFile($name){
+        $file = Components::getOnComponentsName($name);
+        if($file) list($name) = array_keys($file);
+        
         list($rootDir, $secondDir) = explode('/', $name);
         if($rootDir == 'fw' && $secondDir == 'modules'){
             if(file_exists($name)){
@@ -40,11 +43,11 @@ class View{
         }
 
         $dirList = ['./resources/view/'];
-        $packages = PackageControll::getPackageList();
-        $count = count($packages['path']);
-        for($i=0;$i<$count;$i++){
-            $dirList[] = $packages['path'][$i] . '/resources/view/';
-        }
+        // $packages = PackageControll::getPackageList();
+        // $count = count($packages['path']);
+        // for($i=0;$i<$count;$i++){
+        //     $dirList[] = $packages['path'][$i] . '/resources/view/';
+        // }
 
         $count = count($dirList);
         for($i=0;$i<$count;$i++){

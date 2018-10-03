@@ -363,7 +363,9 @@ class Router{
                 self::actions($param1);
             }
         }elseif($param1 and $param2 and !$param3){
-            if(is_string($param2) and strpos($param2, '@') !== false and strpos($param1, '/') !== false){
+            if(is_string($param1) and is_object($param2)){
+                self::get($param1, $param2);
+            }elseif(is_string($param2) and strpos($param2, '@') !== false and strpos($param1, '/') !== false){
                 // this is GET classic
                 self::get($param1, $param2);
             }elseif(strpos($param1, 'Controller') !== false){

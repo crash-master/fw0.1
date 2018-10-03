@@ -49,7 +49,7 @@ function dd($var){
 	  return '<big>' . $str . '</big>';
 	}
 
-	die('<pre>'.ddump($var).'</pre>');
+	die('<pre style="width: 90%; padding: 25px; background: #eee">'.ddump($var).'</pre>');
 }
 
 function redirect($url, $vars = []){

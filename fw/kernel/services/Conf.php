@@ -1,5 +1,5 @@
 <?php
-namespace Kernel;
+namespace Kernel\Services;
 
 class Conf{
 

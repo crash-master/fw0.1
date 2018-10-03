@@ -8,7 +8,7 @@ class Config{
     protected static function init(){
         $config_file = require_once('./fw/config/main.config.php');
         self::$db = new Services\ArrayWrap($config_file, false);
-        self::$conf = new Conf($config_file);
+        self::$conf = new Services\Conf($config_file);
     }
 
     public static function conf(){

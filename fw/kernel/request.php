@@ -6,8 +6,10 @@ class Request{
     private static $args;
     private static $url;
 
-    public static function getArgs($urlTemp){
-        self::$urlTemp = $urlTemp; 
+    public static function getArgs($urlTemp = false){
+        if($urlTemp){
+            self::$urlTemp = $urlTemp; 
+        }
         $url = explode('/',self::getUrl());
         $uri = explode('/',self::$urlTemp); 
         

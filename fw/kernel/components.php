@@ -51,7 +51,10 @@ class Components{
 	 * @return [array]       [one component]
 	 */
 	public static function getOnComponentsName($name){
-		return self::$components[$name];
+		if(isset(self::$components[$name])){
+			return self::$components[$name];
+		}
+		return false;
 	}
 
 	/**

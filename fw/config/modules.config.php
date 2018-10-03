@@ -2,8 +2,6 @@
 
 return [
     
-    'com',
-    
-    //'auth'
+    'com'
     
 ];

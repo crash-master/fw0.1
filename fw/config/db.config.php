@@ -9,7 +9,7 @@ return [
     
     'password' => '',
     
-    'dbname' => 'mag-master',
+    'dbname' => 'mag3-master',
     
     'charset' => 'utf8'
     

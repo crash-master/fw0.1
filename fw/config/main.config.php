@@ -5,7 +5,10 @@ return [
     'system' => [
         'showFuncName' => 'show',
         'debug' => true,
-        'ErrorHandler' => ['E_WARNING', 'E_ERROR', 'E_PARSE'],
+        'ErrorHandler' => [
+            'ImportantErrors' => ['E_WARNING', 'E_ERROR', 'E_CORE_ERROR', 'EXCEPTION'],
+            'ErrorLogDir' => 'tmp/error-logs'
+        ],
         'modules' => require_once('fw/config/modules.config.php'),
         'DB' => require_once('fw/config/db.config.php'),
         'migration' => 'on',

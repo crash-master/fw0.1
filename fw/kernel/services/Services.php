@@ -6,7 +6,8 @@ use Kernel\{
 	Model,
 	Module,
 	View,
-	Events
+	Events,
+	ExceptionHandler
 };
 
 function ddump($data, $indent=0) {
@@ -72,15 +73,6 @@ function show($data){
 	return true;
 }
 
-function phpErrors(){
-	$err = error_get_last();
-	if(!is_array($err))
-		return false;
-
-	Err::add('PHP ERR', $err['message'].' '.$err['file'].' in line '.$err['line']);
-	return true;
-}
-
 function arrayToArray($arr){
 	if(!$arr)
 		return [];
@@ -92,12 +84,6 @@ function arrayToArray($arr){
 
 function atarr($arr){
 	return arrayToArray($arr);
-}
-
-function dump(){
-	Err::log();
-	Log::dump();
-	return true;
 }
 
 function model($name){
@@ -122,4 +108,8 @@ function route($param1, $param2 = false, $param3 = false){
 
 function view($layout, $vars = NULL){
 	return View::make($layout, $vars);
+}
+
+function exception($e, $response_code = false){
+	return ExceptionHandler::getInstance() -> handler($e, $response_code);
 }

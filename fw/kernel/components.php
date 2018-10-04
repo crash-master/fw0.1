@@ -13,10 +13,15 @@ class Components{
 		if(!is_array(self::$components)){
 			self::$components = [];
 		}
-		if(isset(self::$components[$name])){
-			Err::add('Components', "Component with name '{$name}' already exist");
-			return false;
+		try{
+			if(isset(self::$components[$name])){
+				throw new Exception("Component with name '{$name}' already exist");
+				return false;
+			}
+		}catch(Exception $e){
+			exception($e);
 		}
+
 		self::$components[$name] = $component;
 	}
 

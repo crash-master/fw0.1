@@ -115,7 +115,8 @@ class comController{
             if(Maker::refreshMigration())
                 return 'TRUE';
         }
-        Err::add("Err COM", 'Migrations is off in config');
+
+        throw new Exception('Migrations is off in config');
         return 'FALSE';
         
     }
@@ -126,7 +127,7 @@ class comController{
                 return 'TRUE';
         }
 
-        Err::add("Err COM", 'Migrations is off in config');
+        throw new Exception('Migrations is off in config');
         return 'FALSE';
 
     }
@@ -142,8 +143,8 @@ class comController{
             }
         }
 
-        Err::add("Err COM", 'Migrations is off in config');
-        Err::add('ERR Com',"Migration {$name} was not unset");
+        throw new Exception('Migrations is off in config');
+        throw new Exception("Migration {$name} was not unset");
         
         return 'TRUE';
     }
@@ -154,7 +155,7 @@ class comController{
         }
 
         if(!Maker::setMigration([NULL, $name])){
-            Err::add('ERR Com',"Migration {$name} was not unset");
+            throw new Exception('ERR Com',"Migration {$name} was not unset");
             return 'FALSE';
         }
 

@@ -6,9 +6,13 @@ class CodeTemplate{
     public static function create($templateName, $params, $dir = false, $resPath = false){           
         $dir = !$dir ? 'fw/templates/' : $dir; 
         $template = $dir . $templateName . '.php';
-        if(!file_exists($template)){
-            Err::add('CodeTemplate::create()', "File '{$template}' not found!");
-            return false;
+        try{
+            if(!file_exists($template)){
+                throw new Exception("File '{$template}' not found!");
+                return false;
+            }
+        }catch(Exception $e){
+            exception($e);
         }
         
         $file = file_get_contents($template);
@@ -20,12 +24,16 @@ class CodeTemplate{
 
         $file = self::replaceVars($file, $params);
         $file = self::removePathFromFile($file, $path, $template);
-        if(file_put_contents($resPath, $file)){
-            Log::add('CoreTemplate::create()', "Template '{$resPath}' was generated");
-            return true;
+        try{
+            if(file_put_contents($resPath, $file)){
+                Log::add('CoreTemplate::create()', "Template '{$resPath}' was generated");
+                return true;
+            }
+            throw new Exception("Template '{$resPath}' is not generated");
+        }catch(Exception $e){
+            exception($e);
         }
         
-        Err::add('ERR CoreTemplate::create()', "Template '{$resPath}' is not generated");
         return false;
     }
     

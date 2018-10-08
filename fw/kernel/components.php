@@ -59,7 +59,21 @@ class Components{
 		if(isset(self::$components[$name])){
 			return self::$components[$name];
 		}
-		return false;
+		return [];
+	}
+
+	/**
+	 * [getFullOnComponentsName get full component an example [component_name => [view_path => [controller1@action, controller2@action]]]]
+	 *
+	 * @param  [string] $name [name of component]
+	 *
+	 * @return [array] [component in assoc array]
+	 */
+	public static function getFullOnComponentsName($name){
+		if(isset(self::$components[$name])){
+			return [$name => self::$components[$name]];
+		}
+		return [];
 	}
 
 	/**
@@ -107,10 +121,17 @@ class Components{
 	 * [callToAction for calling action]
 	 * @param  [string] $view [path to view]
 	 */
-	public static function callToAction($view, $arguments){
+	public static function callToAction($view, $arguments = false){
 		$component = self::getOnViewPath($view);
-		if(!count($component)){
-			return false;
+		if(!count($component) or !$component){
+			$component = self::getFullOnComponentsName($view);
+			if(!isset($component[$view])){
+				return false;
+			}
+			list($view) = array_keys($component[$view]);
+			if(!count($component) or !$component){
+				return false;
+			}
 		}
 
 		Events::register('before_rendered_component', [
@@ -118,16 +139,18 @@ class Components{
             'component' => $component
         ]);
 
+
 		foreach($component as $name => $item){
 			if(!is_array($item[$view])){
-				list($controller, $action) = explode('@', $item[$view]);
-				View::addVars(self::call($controller, $action, $arguments));
-			}else{
-				$count = count($item[$view]);
-				for($i=0; $i<$count; $i++){
-					list($controller, $action) = explode('@', $item[$view][$i]);
-					View::addVars(self::call($controller, $action, $arguments));
+				$item[$view] = [$item[$view]];
+			}
+			$count = count($item[$view]);
+			for($i=0; $i<$count; $i++){
+				list($controller, $action) = explode('@', $item[$view][$i]);
+				if($controller == ''){
+					dd([$component[$name]]);
 				}
+				View::addVars(self::call($controller, $action, $arguments));
 			}
 		}
 	}

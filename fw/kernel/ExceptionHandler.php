@@ -34,7 +34,7 @@ class ExceptionHandler extends \Exception{
 	 */
 	public function init($ErrorHandler){
 		$this -> ErrorHandler = $ErrorHandler;
-		set_exception_handler([$this, 'handlerFatal']);
+		// set_exception_handler([$this, 'handlerFatal']);
 	}
 
 	 /**
@@ -58,6 +58,8 @@ class ExceptionHandler extends \Exception{
 	 * @return [void] [description]
 	 */
 	public function handlerFatal($e){
+		echo('<pre>');
+		var_dump($e);
 		$this -> ErrorHandler -> viewFatalError($e -> code, $e -> message, $e -> file, $e -> line);
 	}
 

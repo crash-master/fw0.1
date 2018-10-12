@@ -48,7 +48,7 @@ class DBW{
         self::$createParams = NULL;
         self::$tablename = NULL;
         
-        
+        Events::register('after_db_query', ['result' => $res, 'sql' => DBIO::get_last_sql_query_string()]);
         
         return $res;
     }

@@ -89,7 +89,7 @@ class ErrorHandler{
 
 		register_shutdown_function([$this, 'fatalErrorHandler']);
 
-		ob_start();
+		// ob_start();
 	}
 
 	/**
@@ -101,13 +101,13 @@ class ErrorHandler{
 		$error = error_get_last();
 		if ($error){
 			if($error['type'] == E_ERROR || $error['type'] == E_PARSE || $error['type'] == E_COMPILE_ERROR || $error['type'] == E_CORE_ERROR){
-				ob_end_clean();
+				// ob_end_clean();
 				$this -> viewFatalError($error['type'], $error['message'], $error['file'], $error['line']);
 				// $this -> errs_src[] = ['errno' => $error['type'], 'err_type' => $err_type, 'errstr' => $error['message'], 'errfile' => $error['file'], 'errline' => $error['line']];
 				// $this -> logsDump();
 			}
 		}
-		ob_end_flush();
+		// ob_end_flush();
 	}
 
 	/**
@@ -306,7 +306,7 @@ class ErrorHandler{
 		$code = $this -> getProgCode($errfile, $errline);
 		?>
 		<style>
-			*{padding:0;margin:0}body{background:#444}.fw-err-block{width:100%;height:auto;padding:20px;background-color:#444;color:#eee;font-family:Courier!important;font-size:15px}.fw-err-block .line{display:block;padding:10px;background:#eee;font-weight:700}.fw-err-block .line.error{background-color:#ccc;color:#B71C1C}.fw-err-block code{padding:10px;color:#00695C}.fw-err-block code .line b{padding-right:10px;border-right:2px solid #ccc;display:inline-block;margin-right:10px;font-weight:400}
+			*{padding:0;margin:0}body{background:#444}.fw-err-block{position:absolute;z-index:10000;top:0;left:0;width:100%;height:auto;padding:20px;background-color:#444;color:#eee;font-family:Courier!important;font-size:15px}.fw-err-block .line{display:block;padding:10px;background:#eee;font-weight:700}.fw-err-block .line.error{background-color:#ccc;color:#B71C1C}.fw-err-block code{padding:10px;color:#00695C}.fw-err-block code .line b{padding-right:10px;border-right:2px solid #ccc;display:inline-block;margin-right:10px;font-weight:400}
 		</style>
 		<div class="fw-err-block">
 			<div class="fw-err-block-head">

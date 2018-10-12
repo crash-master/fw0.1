@@ -8,7 +8,12 @@ class Connect{
 	public static $config;
 	public static $countQuery;
 	public static $connect;
+	private static $lastSqlQueryString;
 	
+	public static function get_lastSqlQueryString(){
+		return self::$lastSqlQueryString;
+	}
+
 	public static function start(){
 		self::$config = Config::get('system -> DB');
 		self::open_connect();
@@ -44,9 +49,8 @@ class Connect{
 	}
 	
 	public static function query($sql){
-		Events::register('before_db_query', ['sql' => $sql]);
+		self::$lastSqlQueryString = $sql;
 		$result = strpos($sql, 'SELECT') !== false ? self::$connect -> query($sql) -> fetchAll(\PDO::FETCH_ASSOC) : self::$connect -> query($sql);
-		Events::register('after_db_query', ['result' => $result]);
 		
 		self::$countQuery++;     
 		return $result;
@@ -69,14 +73,17 @@ class DBIO{
 		Connect::close_connect();
 		return true;
 	}
+
+	public static function get_last_sql_query_string(){
+		return Connect::get_lastSqlQueryString();
+	}
 	
 	
 	public static function select($params){ // $table - string, $rows - array, $where - array, $limit - array(from,count), $sort - DESC || ASC, $many - true || false) || $sql - string
 		if(!isset($params['table'])){
 			return false;
 		}
-
-		if(!isset($params['rows'])){
+		if(!isset($params['rows']) or is_null($params['rows'])){
 			$params['rows'] = '*';
 		}else{
 			$count = count($params['rows']);

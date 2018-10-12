@@ -9,10 +9,6 @@ use Kernel\Events;
 //
 //});
 
-//Events::add('before_db_query', function($params){
-//    dd($params);
-//});
-
 //Events::add('after_db_query', function($params){
 //    dd($params);
 //});
